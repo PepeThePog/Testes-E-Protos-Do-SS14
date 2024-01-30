@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatTigerCoop
+  name: Tiger Cooperation Officer Hat
+  description: A variant of the Syndicate's MAA hat, now used by the higher ranks of the Tiger Cooperation.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/tc-hat.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/tc-hat.rsi

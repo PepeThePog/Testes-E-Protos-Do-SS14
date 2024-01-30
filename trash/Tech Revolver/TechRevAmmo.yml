@@ -1,0 +1,16 @@
+- type: entity
+  id: ShellTechEnergyRevolverShot
+  name: Energy Shell (.50SE)
+  parent: BaseShellShotgun
+  components:
+  - type: Sprite
+  sprite: Objects/Weapons/Guns/Projectiles/TechRevAmmo.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: TechRevShot
+    count: 1
+    spread: 0
+  - type: SpentAmmoVisuals
+    state: "base-spent"

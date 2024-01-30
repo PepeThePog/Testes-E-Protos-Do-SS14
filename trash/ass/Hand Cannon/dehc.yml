@@ -1,0 +1,68 @@
+- type: Tag
+  id: MagazineHandCannon
+
+- type: Tag
+  id: CartridgeAntiMaterielHandCannon
+
+- type: entity
+  name: DE-82 HandCannon
+  parent: BaseWeaponPistol
+  id: WeaponPistolHandCannonDeagle
+  description: An incredibely heavy piece of machinery, hits hard, and uses the custom .60AE Cartridge.
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-1
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: Small
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Clothing
+    sprite: EstacaoPirata/Objects/Weapon/Guns/Pistol/Hand_Cannon/dehc.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/DEHC/dehc.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/DEHC/dehc_rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineHandCannon
+        insertSound: /Audio/Weapons/Guns/DEHC/dehc_reload.ogg
+        ejectSound: /Audio/Weapons/Guns/DEHC/dehc_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineHandCannon
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeAntiMaterielHandCannon
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeAntiMaterielHandCannon
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag-1
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 1500

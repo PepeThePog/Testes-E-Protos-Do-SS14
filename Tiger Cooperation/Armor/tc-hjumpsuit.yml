@@ -1,0 +1,10 @@
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitTigerCoopElite
+  name: Heavy Tiger Cooperation Jumpsuit
+  description: An uniform for the elites of the space militia, the Tiger Cooperation.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/tc-hjumpsuit.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/tc-hjumpsuit.rsi

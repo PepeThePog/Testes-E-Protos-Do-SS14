@@ -1,0 +1,10 @@
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitTigerCoop
+  name: Tiger Cooperation Jumpsuit
+  description: An uniform for the space militia, the Tiger Cooperation.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/tc-jumpsuit.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/tc-jumpsuit.rsi

@@ -1,0 +1,21 @@
+- type: entity
+  parent: BaseCartridge
+  id: CartridgeAntiMaterielHandCannon
+  name: cartridge (.60AE)
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeAntiMateriel
+    - CartridgeAntiMaterielHandCannon
+  - type: CartridgeAmmo
+    proto: BulletAntiMaterielHandCannon
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/60ae-casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 80

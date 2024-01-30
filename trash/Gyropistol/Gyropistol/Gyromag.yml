@@ -1,0 +1,29 @@
+- type: entity
+  id: BaseCartridgeGyroJetPistol
+  name: 5mm Gyrojet Pistol Magazine
+  parent: BaseMagazinePistol
+  description: Using the forgotten 5mm shell, this seven-round magazine is used by the G5-Gyrojet Pistol.
+  components:
+  - type: Tag
+    tags:
+      - BaseCartridgeGyroJetPistol
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: BaseGyrojetShell
+    capacity: 7
+    whitelist:
+      tags:
+        - BaseGyrojetShell
+  - type: ContainerContainer
+  - type: Sprite
+    sprite: EstacaoPirata/Objects/Weapon/Guns/Pistol/Gyropistol/gyromag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 0
+    zeroVisible: false
+  - type: Appearance

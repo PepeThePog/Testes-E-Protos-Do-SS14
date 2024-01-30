@@ -1,0 +1,21 @@
+- type: entity
+  id: BaseCartridgeSMG9mm
+  name: cartridge (.9mm)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeSMG9mm
+  - type: CartridgeAmmo
+    proto: BulletSMG9mm
+  - type: Sprite
+    sprite: EstacaoPirata/Objects/Weapon/Guns/SMG/SD7/9mm.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 15

@@ -1,0 +1,44 @@
+- type: entity
+  name: T.C-50SE Energy Revolver
+  parent: BaseItem
+  id: WeaponRevolverTechEnergy
+  description: Shiny, Powerful and Fearsome, the T.C-50SE Energy Revolver is a tool of massive destruction, and extremly costly to produce. Less than a hundred of them were ever made, and its ammunition is just as scarce. It has the engravings of the Tiger Cooperation on its loader.
+  abstract: true
+  components:
+  - type: Sprite
+    state: base
+  - type: Item
+    size: Small
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Revolvers/TechRev.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: Gun
+    selectedMode: SemiAuto
+    fireRate: 2
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+  - type: ContainerContainer
+    containers:
+      revolver-ammo: !type:Container
+  - type: RevolverAmmoProvider
+    whitelist:
+      tags:
+        - ShellTechEnergyRevolverShot
+    proto: ShellTechEnergyRevolverShot
+    capacity: 6
+    chambers: [ True, True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null, null ]
+    soundEject:
+      path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+  - type: StaticPrice
+    price: 5500

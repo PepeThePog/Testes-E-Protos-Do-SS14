@@ -1,0 +1,48 @@
+
+- type: entity
+  name: M1A4 Assault Rifle
+  parent: BaseWeaponRifle
+  id: WeaponRifleM1A4
+  description: A more modern version of the 2019 M4 SOCOM, uses the 30. Ammo.  
+  components:
+  - type: Sprite
+    sprite: EstacaoPirata/Objects/Weapon/Guns/Rifle/M1A4/m1a4.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 8
+    soundGunshot:
+      path: /Audio/EstacaoPirata/Weapons/M1A4/m1a4.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/EstacaoPirata/Weapons/M1A4/m1a4_rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifleM1A4
+        insertSound: /Audio/EstacaoPirata/Weapons/M1A4/m1a4_magin.ogg
+        ejectSound: /Audio/EstacaoPirata/Weapons/M1A4/m1a4_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifleM1A4
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: Appearance

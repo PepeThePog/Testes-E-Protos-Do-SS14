@@ -1,0 +1,66 @@
+- type: entity
+  name: K&H HighCapacity Submachine Gun
+  id: WeaponLightMachineGunHSMG
+  parent: BaseWeaponLightMachineGun
+  description: Some madman decided to convert a SMG' into a LMG by modifying the bolt and adding a drum magazine...And somehow it works, and uses .45 magnum ammo.
+  components:
+  - type: Sprite
+    sprite: EstacaoPirata/Objects/Weapon/Guns/SMGs/kghc_smg/kghcsmg.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -20
+  - type: Gun
+    minAngle: 35
+    maxAngle: 55
+    angleIncrease: 5
+    angleDecay: 18
+    fireRate: 8
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/EstacaoPirata/Weapons/HeavySMG/hsmg.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/EstacaoPirata/Weapons/HeavySMG/hsmg_rack.ogg
+  - type: AmmoCounter
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineHeavySMG
+        insertSound: /Audio/EstacaoPirata/Weapons/HeavySMG/hsmg_magin.ogg
+        ejectSound: /Audio/EstacaoPirata/Weapons/HeavySMG/hsmg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineMagnumHeavySMG
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeMagnum
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: StaticPrice
+    price: 1000
+  - type: UseDelay
+    delay: 1

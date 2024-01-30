@@ -1,0 +1,44 @@
+- type: entity
+  name: M894 Lever Action Rifle
+  parent: BaseItem
+  id: WeaponLeverAction
+  description: A modern lever action rifle. Uses .40 Ammunition.
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+      - state: icon
+        map: [ "enum.GunVisualLayers.Base" ]
+  - type: Item
+    # If you update this also update the bulldog's size.
+    size: Large
+  - type: Clothing
+    sprite: EstacaoPirata/Objects/Weapons/Guns/Rifles/lar/lar.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/EstacaoPirata/Weapons/Guns/lar/winch.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - CartridgeMagnum
+    capacity: 7
+    proto: CartridgeMagnum
+    soundInsert:
+      path: /Audio/EstacaoPirata/Weapons/Guns/lar/winch_ins.ogg
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: StaticPrice
+    price: 500

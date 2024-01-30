@@ -1,0 +1,70 @@
+- type: Tag
+  id: BaseCartridgeGyroJetPistol
+
+- type: Tag
+  id: BaseGyrojetShell
+
+- type: entity
+  name: G5-Gyrojet Pistol
+  parent: BaseWeaponPistol
+  id: WeaponPistolGyrojet
+  description: A forgotten piece of history. The only weapon using the 5mm round around the Sector 14. Has a compact, yet heavy frame, and fits a seven-round magazine.
+  components:
+  - type: Item
+    size: Normal
+  - type: Sprite
+    sprite: EstacaoPirata/Objects/Weapon/Guns/Pistol/GyroPistol/Gyropistol.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: EstacaoPirata/Objects/Weapon/Guns/Pistol/Gyropistol.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+    - Pockets
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/EstacaoPirata/Weapons/Gyropistol/gyropistol_fire.ogg
+      params:
+       volume: -2
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/EstacaoPirata/Weapons/Gyropistol/gyropistol_rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BaseCartridgeGyroJetPistol
+        insertSound: /Audio/EstacaoPirata/Weapons/Gyropistol/gyropistol_reload.ogg
+        ejectSound:
+          path: /Audio/EstacaoPirata/Weapons/Gyropistol/gyropistol_magout
+          params:
+            volume: -6
+        priority: 2
+        whitelist:
+          tags:
+            - BaseGyrojetShell
+      gun_chamber:
+        name: Chamber
+        startingItem: BaseGyrojetShell
+        priority: 1
+        whitelist:
+          tags:
+            - BaseGyrojetShell
+  - type: ContainerContainer
+  - type: MagazineVisuals
+    magState: mag
+    steps: 0
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 5500

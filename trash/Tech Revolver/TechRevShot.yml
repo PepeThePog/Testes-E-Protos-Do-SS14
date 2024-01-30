@@ -1,0 +1,28 @@
+- type: entity
+  name: techno revolver shot
+  id: TechEnergyRevolverShot
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/TechRevShot.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: red
+  - type: Projectile
+    soundHit: 
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 15
+        Piercing: 20 
+  - type: StaminaDamageOnCollide
+    damage: 5        
+  - type: PointLight
+    enabled: true
+    color: "#ff4300"
+    radius: 3.0
+    energy: 5.0
+  - type: IgniteOnCollide
+    fireStacks: 3

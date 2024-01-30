@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitTigerCoop
+  noSpawn: true
+  name: T.C Techsuit Helmet
+  description: The helmet that comes with the Tiger Cooperation's Techsuit.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hardsuits/tc-hard-helmet.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hardsuits/tc-hard-helmet.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000

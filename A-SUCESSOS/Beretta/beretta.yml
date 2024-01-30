@@ -1,0 +1,38 @@
+- type: entity
+  name: N9BF Burst Pistol
+  parent: BaseWeaponPistol
+  id: WeaponPistolBeretta
+  description: A rather bulky machine pistol, has a burst-fire receiver, and an angled grip for extra control. Uses .35 auto ammo.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Pistols/beretta.rsi
+    availableModes:
+    - FullAuto
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/beretta.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolHighCapacity
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistol
+            - MagazinePistolHighCapacity
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Gun
+    fireRate: 10

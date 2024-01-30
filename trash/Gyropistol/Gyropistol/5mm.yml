@@ -1,0 +1,26 @@
+- type: entity
+  id: BaseGyrojetShell
+  name: Gyrojet 5mm Shell
+  parent: BaseCartridgePistol
+  description: A forgotten cartridge for a forgotten weapon, although it's a small bullet, it expands upon impact, dealing a considerable damage.
+  components:
+  - type: Tag
+    tags:
+      - BaseEnergyShell
+  - type: CartridgeAmmo
+    proto: EletricPlasma
+    count: 1
+    spread: 0
+  - type: Sprite
+    sprite: EstacaoPirata/Objects/Weapon/Guns/Pistol/Gyropistol/gyroshot.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+    state: "base"
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Weapons/Guns/Casings/casing_fall_2.ogg
+      params:
+        volume: -1

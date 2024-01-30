@@ -1,0 +1,19 @@
+- type: entity
+  id: 5mm
+  name: Gyrojet 5mm
+  noSpawn: true
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: EstacaoPirata/Objects/Weapon/Guns/Pistol/Gyropistol/gyroshot.rsi
+    layers:
+    - state: gyroshot
+      shader: unshaded
+  - type: GatheringProjectile
+  - type: Projectile
+    impactEffect: gyroimpact
+    damage:
+      types:
+        Slash: 2
+        Blunt: 5
+        Structural: 1

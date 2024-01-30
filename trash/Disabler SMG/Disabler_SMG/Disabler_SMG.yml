@@ -1,0 +1,37 @@
+- type: entity
+  name: Disabler SMG
+  parent: BaseWeaponBatterySmall
+  id: WeaponDisablerSMG
+  description: The disabler's big brother, a 'quicker' approach to the regular security officer, it is fully automatic.
+  components:
+    - type: Tag
+      tags:
+        - Taser
+        - Sidearm
+    - type: Sprite
+      sprite: EstacaoPirata/Objects/Weapon/Guns/Battery/disabler_smg/dsmg.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-unshaded-0
+          map: ["enum.GunVisualLayers.MagUnshaded"]
+          shader: unshaded
+    - type: Gun
+      fireRate: 5
+      selectedMode: FullAuto
+      availableModes:
+      - FullAuto
+      - Semiauto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletDisabler
+      fireCost: 250
+    - type: MagazineVisuals
+      magState: mag
+      steps: 5
+      zeroVisible: true
+    - type: Appearance
+    - type: GuideHelp
+      guides:
+      - Security

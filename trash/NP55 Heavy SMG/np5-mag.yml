@@ -1,0 +1,13 @@
+- type: entity
+  id: MagazinePistolSubMachineGunNP5
+  name: "Drum Magazine (.30 HSMG)"
+  parent: BaseMagazineLightRifle
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolSubMachineGunNP5
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifle
+    capacity: 65
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/np5-mag.rsi

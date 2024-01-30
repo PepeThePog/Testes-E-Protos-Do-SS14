@@ -1,0 +1,55 @@
+- type: entity
+  name: SD-7 Submachine Gun
+  parent: BaseItem
+  id: GunSubmachinegunMp5SD7
+  description: A blast from the past, and a pretty quiet one. With an aluminium integrade suppressor and a high fire rate, the SD-7 can still prove itself useful even on the modern scenario.
+  abstract: true
+  components:
+  - type: Sprite
+  - type: Item
+    size: Huge
+  - type: Clothing
+    sprite: EstacaoPirata/Objects/Weapon/Guns/SMG/SD7/sd7.rsi 
+    quickEquip: false
+    slots:
+    - suitStorage
+  - type: AmmoCounter
+  - type: Gun
+    minAngle: 2
+    maxAngle: 16
+    fireRate: 13
+    angleIncrease: 3
+    angleDecay: 16
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Audio/EstacaoPirata/Weapons/Guns/SMG/SD7/sd7.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/EstacaoPirata/Weapons/Guns/SMG/SD7/sd7_rack.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Base9mmMagazine
+        insertSound: /Audio/EstacaoPirata/Weapons/Guns/SMG/SD7/sd7_magin.ogg
+        ejectSound: /Audio/EstacaoPirata/Weapons/Guns/SMG/SD7/sd7_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - Base9mmMagazine
+      gun_chamber:
+        name: Chamber
+        startingItem: BaseCartridgeSMG9mm
+        priority: 1
+        whitelist:
+          tags:
+            - BaseCartridgeSMG9mm
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: StaticPrice
+    price: 500

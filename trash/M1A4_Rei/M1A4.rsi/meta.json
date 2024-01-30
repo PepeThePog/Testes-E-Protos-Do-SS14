@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "base",
+      "delays": [
+        [
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "mag-unshaded-0",
+      "delays": [
+        [
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "icon"
+    },
+    {
+      "name": "mag-0",
+      "delays": [
+        [
+          0.3,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

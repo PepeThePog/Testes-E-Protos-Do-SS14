@@ -1,0 +1,29 @@
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitTigerCoop
+  name: T.C Techsuit
+  description: An experimental model of hardsuit made by the Syndicate and the Tiger Cooperation. Adapts itself around the user for better movement.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/tc-hardsuit.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/tc-hardsuit.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.8
+        Piercing: 0.9
+        Heat: 0.6
+        Radiation: 0.6
+        Caustic: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitTigerCoop

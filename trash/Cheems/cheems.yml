@@ -1,0 +1,33 @@
+- type: entity
+  name: Cheems
+  parent: MobCorgi
+  id: MobCorgiIan
+  description: It's Cheems! He loves cheemsburbger'.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: /Textures/Mobs/Pets/cheems.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: cheems
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: cheems
+      Critical:
+        Base: cheems_dead
+      Dead:
+        Base: cheems_dead
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: male
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatCorgi
+      amount: 2
+    - id: MaterialHideCorgi
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - VimPilot

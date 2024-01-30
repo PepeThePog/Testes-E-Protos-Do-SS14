@@ -1,0 +1,19 @@
+- type: entity
+  id: MagazineLightRifleM1A4
+  name: "M1A4 Magazine (.30 rifle)"
+  parent: BaseMagazineLightRifle
+  components:
+  - type: Tag
+    tags:
+      - MagazineLightRifle
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifle
+    capacity: 30
+  - type: Item
+  - type: Sprite
+    sprite: EstacaoPirata/Objects/Weapon/Guns/Rifle/M1A4/m1a4_mag.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
