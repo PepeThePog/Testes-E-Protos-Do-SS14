@@ -1,0 +1,31 @@
+- type: entity
+  name: Cheems
+  parent: MobCorgi
+  id: MobShibaCheems
+  description: It's cheems! He loves cheeseburger, and his best friend Walter!
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Pets/cheems.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: cheems
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: cheems
+      Critical:
+        Base: cheems_dead
+      Dead:
+        Base: cheems_dead
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: male
+  - type: Butcherable
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - VimPilot
+  - type: StealTarget
+    stealGroup: AnimalIan
