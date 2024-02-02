@@ -1,0 +1,77 @@
+- type: entity
+  abstract: true
+  id: MobNarsieBaseStarGazer
+  name: The Star Gazer
+  description: The one who sees the birth and death of the billions of stars of the universe. It is eager to see Your Death As Well.
+  components:
+  - type: Sprite
+    sprite: Mobs/Demons/gazer.rsi
+    drawdepth: Ghosts
+    scale: 1.5,1.5
+    layers:
+    - state: gazer
+      shader: unshaded
+
+- type: entity
+  parent: [MobNarsieBaseStarGazer, MobNarsieBase, BaseMob]
+  id: MobStarGazer
+  components:
+  - type: CargoSellBlacklist
+
+  - type: ContentEye
+    maxZoom: 2.0,2.0
+  - type: Fixtures
+    fixtures:
+      EventHorizonCollider:
+        shape:
+          !type:PhysShapeCircle
+            radius: 5
+        hard: false
+        restitution: 0.8
+        density: 99999
+        mask:
+        - AllMask
+        layer:
+        - AllMask
+      EventHorizonConsumer:
+        shape:
+          !type:PhysShapeCircle
+            radius: 5
+        hard: false
+        mask:
+        - AllMask
+        layer:
+        - AllMask
+  - type: Input
+    context: "ghost"
+  - type: MovementIgnoreGravity
+
+  - type: IntrinsicRadioReceiver
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Command
+    - CentCom
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Syndicate
+    globalReceive: true
+  - type: Physics
+    bodyType: Dynamic
+    bodyStatus: InAir
+  - type: CanMoveInAir
+
+  - type: EventHorizon
+    radius: 5
+    canBreachContainment: true
+  - type: GravityWell
+    baseRadialAcceleration: 6
+    maxRange: 8
+  - type: WarpPoint
+    follow: true
+    location: The Star Gazer
