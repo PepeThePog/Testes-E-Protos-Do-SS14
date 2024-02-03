@@ -1,0 +1,75 @@
+- type: soundCollection
+  id: SpookSounds
+  files:
+    - /Audio/Voice/Spook/spooksound.ogg
+    - /Audio/Voice/Spook/spooksound2.ogg
+    - /Audio/Voice/Spook/spooksound3.ogg
+    - /Audio/Voice/Spook/spooksound4.ogg
+
+- type: entity
+  parent: [ SimpleMobBase, MobCombat ]
+  id: MobSpookShadow
+  name: The Spook
+  description: A strange, impossible anomalous creature. Reality seems to be constantly trying to erase it.
+  abstract: true
+  components:
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - Flesh
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Demons/spook.rsi
+  - type: MovementAlwaysTouching
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 0.5
+    baseSprintSpeed: 1.5
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      350: Dead
+  - type: CombatMode
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Spook/spook_attack.ogg
+    angle: 2
+    animation: WeaponArcClaw
+    damage: 
+      types:
+        Cellular: 6
+        Piercing: 4
+        Structural: 3
+  - type: SpamEmitSound 
+    sound:
+      params:
+        volume: -5
+      collection: SpookSounds
+- type: damageModifierSet
+  id: MobSpookShadow
+  coefficients:
+    Blunt: 0.2
+    Slash: 0.2
+    Piercing: 0.2
+    Cold: 0.0
+    Heat: 2
+    Poison: 0.5
+    Radiation: 3
+    Asphyxiation: 0.0
+    Bloodloss: 0.0
+    Cellular: 5
+    Structural: 1
