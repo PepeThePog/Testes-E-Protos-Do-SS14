@@ -1,0 +1,13 @@
+- type: entity
+  name: Golden Revolver
+  parent: BaseWeaponRevolver
+  id: WeaponRevolverGolden
+  description: A golden revolver, apart from the obvious golden frame, it's a normal revolver, and uses .45 Magnum.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Revolvers/goldrev.rsi
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Revolvers/goldrev.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
