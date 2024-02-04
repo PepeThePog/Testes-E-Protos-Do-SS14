@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltMilitaryAgentEngineer
+  name: A.T.P Engineer Assault Belt
+  description: A very tactical, tight belt, able to store plenty of whatever items you need in combat.
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/engineer_belt.rsi
+  - type: Clothing
+    sprite: Clothing/Belt/engineer_belt.rsi
+  - type: Item
+    size: 60
+  - type: Storage
+    capacity: 90

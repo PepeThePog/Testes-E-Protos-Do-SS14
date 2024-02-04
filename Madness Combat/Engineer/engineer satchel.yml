@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelAgentEngineer
+  name: A.T.P Engineer Tactical Satchel
+  description: A compact black satchel, used to complete the A.T.P Engineer Outfit.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Satchels/engineer_satchel.rsi

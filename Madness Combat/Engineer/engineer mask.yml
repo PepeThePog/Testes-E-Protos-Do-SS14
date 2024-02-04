@@ -1,0 +1,10 @@
+- type: entity
+  parent: [ ClothingMaskGas, ClothingEyesHudSecurity ]
+  id: ClothingMaskGasAgentEngineer
+  name: A.T.P Engineer Mask
+  description: A mask which covers mostly your entire face, can provide you with a Security-Based Hud System.
+  components:
+  - type: Sprite
+    sprite: Clothing/Mask/engineer_mask.rsi
+  - type: Clothing
+    sprite: Clothing/Mask/engineer_mask.rsi
