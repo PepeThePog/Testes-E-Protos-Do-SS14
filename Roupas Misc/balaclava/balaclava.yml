@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingMaskBandanaBase
+  id: ClothingMaskBalaclava
+  name: Balaclava
+  description: A black, skin-tight piece of cloth to hide your face. Can be seen in two situations - Trying to look tacticool, or steal something.
+  components:
+  - type: Sprite
+    sprite: Clothing/Mask/balaclava.rsi
+  - type: Clothing
+    sprite: Clothing/Mask/balaclava.rsi

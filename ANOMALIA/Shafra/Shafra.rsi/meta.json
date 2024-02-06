@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Ported From IS12.",
+  "states": [
+    {
+      "name": "alive"
+    },
+    {
+      "name": "dead",
+      "directions": 4
+    }
+  ]
+}

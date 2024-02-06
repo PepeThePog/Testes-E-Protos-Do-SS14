@@ -1,7 +1,7 @@
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesHudSecurityAgent
-  name: Agent Glasses
+  name: 1337 Agent Glasses
   description: A pair of very stylish red glasses, has an inbuilt hud system.
   components:
   - type: Sprite
