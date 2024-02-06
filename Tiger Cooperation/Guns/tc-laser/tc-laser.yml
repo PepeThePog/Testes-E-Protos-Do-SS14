@@ -1,0 +1,25 @@
+- type: entity
+  name: TCLC1 "Laser Carbine Mk1"
+  parent: BaseWeaponBattery
+  id: WeaponLaserCarbineTigerCoopMK1
+  description: Even cheaper than NanoTrasen's model, This Carbine is a glorified laser pistol.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/tc-laser.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/tc-laser.rsi
+  - type: StaticPrice
+    price: 120
+  - type: Gun
+    selectedMode: Burst
+    availableModes:
+    - Burst
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLaser
+    fireCost: 82.5

@@ -1,0 +1,25 @@
+- type: entity
+  name: TCFR5 "M90"
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunTigerCoopM90
+  description: Using the frame of the ancient P90, the M90 aims to do absolutely the same, but using .35 auto ammo.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/SMGs/tc-smg.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/SMGs/tc-smg.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
