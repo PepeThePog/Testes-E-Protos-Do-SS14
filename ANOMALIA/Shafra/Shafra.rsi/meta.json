@@ -1,18 +1,18 @@
 {
   "version": 1,
   "size": {
-    "x": 32,
-    "y": 32
+    "x": 128,
+    "y": 64
   },
   "license": "CC-BY-SA-3.0",
   "copyright": "Ported From IS12.",
   "states": [
     {
-      "name": "alive"
+      "name": "shafra_alive",
+      "directions":4
     },
     {
-      "name": "dead",
-      "directions": 4
+      "name": "shafra_dead"
     }
   ]
 }
