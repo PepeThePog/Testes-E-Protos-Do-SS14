@@ -1,0 +1,11 @@
+- type: entity
+  id: StatueAngelGabriel
+  parent: BaseStructure
+  name: The Statue Of An Angel
+  description: A creepy looking statue, depicting an angel.
+  components:
+  - type: Sprite
+    sprite: Structures/Decoration/statue_angel.rsi
+    state: statue_angel
+    drawdepth: Mobs
+    offset: "0.0,0.5"

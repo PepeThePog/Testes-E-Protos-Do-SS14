@@ -1,0 +1,13 @@
+﻿- type: entity
+  parent: [Clothing, JetpackSecurity]
+  id: ClothingBackpackSafeguardControl
+  name: NanoTrasen's "Safeguard-Type" Core
+  description: The Core of the Safeguard Modular Hardsuit.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/safeguard-control.rsi
+  - type: Item
+    size: Ginormous
+  - type: Clothing
+    slots: BACK
+    sprite: Clothing/Back/safeguard-control.rsi
