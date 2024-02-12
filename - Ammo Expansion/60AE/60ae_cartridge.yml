@@ -1,0 +1,20 @@
+- type: entity
+  parent: BaseCartridge
+  id: CartridgeAntiMaterielDeagle
+  name: cartridge (.60AE)
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeAntiMaterielDeagle
+  - type: CartridgeAmmo
+    proto: BulletAntiMaterielDeagle
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 20

@@ -1,0 +1,135 @@
+- type: entity
+  abstract: true
+  name: Security Drone
+  id: MobSiliconSecurityDrone
+  parent: WeaponTurretNanoTrasen
+  components:
+  - type: LagCompensation
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: Clickable
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: InteractionOutline
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.30
+        density: 80
+        mask:
+          - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: Sprite
+    sprite: Mobs/Silicon/secdrone.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 4
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+  - type: HealthExaminable
+    examinableTypes:
+    - Blunt
+    - Slash
+    - Piercing
+    - Heat
+    - Shock
+    locPrefix: silicon
+  - type: MovedByPressure
+  - type: Physics
+    bodyType: KinematicController # Same for all inheritors
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Stutter
+    - Electrocution
+  - type: NameIdentifier
+    group: GenericNumber
+  - type: Repairable
+    fuelcost: 25
+    doAfterDelay: 8
+  - type: Pullable
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - ShoesRequiredStepTriggerImmune
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      320: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+    showOverlays: false
+  - type: Stamina
+    critThreshold: 120
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:TriggerBehavior
+    - trigger:
+        !type:DamageTrigger
+        damage: 220
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Input
+    context: "human"
+  - type: InputMover
+  - type: MobMover
+  - type: Body
+    prototype: Bot
+  - type: Speech
+    speechVerb: Robotic
+  - type: TypingIndicator
+    proto: robot
+  - type: ZombieImmune
+  - type: ProjectileBatteryAmmoProvider
+    proto: WatcherBolt
+    fireCost: 50
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 100
+  - type: Battery
+    maxCharge: 500
+    startingCharge: 500
+  - type: Gun
+    fireRate: 1
+    useKey: false
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
+  - type: CombatMode

@@ -1,0 +1,13 @@
+- type: entity
+  noSpawn: true
+  parent: BaseBullet
+  id: BulletAntiMaterielDeagle
+  name: bullet (.60AE)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 25
+        Structural: 15
+  - type: StaminaDamageOnCollide
+    damage: 53

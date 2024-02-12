@@ -1,0 +1,43 @@
+- type: entity
+  name: Desert Eagle
+  parent: BaseWeaponPistol
+  id: WeaponPistolDeagle
+  description: Heavy, impractical and expensive, The Desert Eagle stands as the sidearm which is used just to look cool. Doesn't mean it can't wipe the target out of the face of the Earth. Comes in .60AE. 
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Pistols/deagle.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Pistols/deagle.rsi
+  - type: Gun
+    minAngle: 1
+    maxAngle: 25
+    angleIncrease: 8
+    angleDecay: 9
+    fireRate: 2
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/hpistol.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolDeagle
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolDeagle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeAntiMaterielDeagle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeAntiMaterielDeagle
