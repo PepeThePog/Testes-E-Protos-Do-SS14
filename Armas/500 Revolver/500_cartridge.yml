@@ -1,0 +1,19 @@
+- type: entity
+  id: CartridgeMagnum500
+  name: cartridge (.500 magnum)
+  parent: BaseCartridgeMagnum
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - CartridgeMagnum
+      - CartridgeMagnum500
+  - type: CartridgeAmmo
+    proto: BulletMagnum500
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals

@@ -1,0 +1,55 @@
+- type: entity
+  name: .500 Magnum Revolver
+  parent: BaseWeaponRevolver
+  id: WeaponRevolverMagnum500
+  description: A monster of a revolver, shooting the massive .500 Magnum bullet, it has an unique feature in which the shooter is able to shoot faster when rapidly tapping the revolver's hammer, Yee-Haw.
+  abstract: true
+  components:
+  - type: Sprite
+    state: icon
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Clothing
+    sprite: Tucano/Objects/Weapons/Guns/Revolvers/500_revolver.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: AmmoCounter
+  - type: Gun
+    selectedMode: SemiAuto
+    fireRate: 1.2
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/big_revolver.ogg
+  - type: UseDelay
+    delay: 0.22
+  - type: ContainerContainer
+    containers:
+      revolver-ammo: !type:Container
+  - type: RevolverAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeMagnum500
+        - SpeedLoaderMagnum500
+    proto: CartridgeMagnum500
+    capacity: 7
+    chambers: [ True, True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null, null ]
+    soundEject:
+      path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+  - type: StaticPrice
+    price: 2500
+  - type: Wieldable
+  - type: GunWieldBonus
+  selectedMode: FullAuto
+  fireRate: 5

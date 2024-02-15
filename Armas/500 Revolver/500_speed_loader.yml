@@ -1,0 +1,19 @@
+- type: entity
+  id: SpeedLoaderMagnum500
+  name: "speed loader (.500 magnum)"
+  parent: BaseSpeedLoaderMagnum
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeMagnum500
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/500_speed_loader.rsi
+    layers:
+      - state: base
+        map: [ "enum.GunVisualLayers.Base" ]
+      - state: base-7
+        map: [ "enum.GunVisualLayers.Mag" ]
+  - type: MagazineVisuals
+    magState: base
+    steps: 8
+    zeroVisible: false
+  - type: Appearance

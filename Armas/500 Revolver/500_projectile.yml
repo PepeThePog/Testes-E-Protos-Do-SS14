@@ -1,0 +1,12 @@
+- type: entity
+  id: BulletMagnum500
+  name: bullet (.500 magnum)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 55
+  - type: StaminaDamageOnCollide
+    damage: 55

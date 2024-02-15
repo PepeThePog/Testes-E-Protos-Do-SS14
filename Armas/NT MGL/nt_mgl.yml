@@ -1,0 +1,30 @@
+- type: entity
+  name: NanoTrasen-Brand Grenade Launcher
+  parent: [BaseWeaponLauncher, BaseWeaponRevolver]
+  id: WeaponLauncherNT
+  description: A NanoTrasen-Brand, Revolver-Type Grenade Launcher, holds six shells of grenades.
+  components:
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Launchers/nt_mgl.rsi
+    layers:
+      - state: icon
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: Tucano/Objects/Weapons/Guns/Launchers/nt_mgl.rsi
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - Grenade
+    capacity: 6
+    proto: GrenadeFrag
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
