@@ -1,0 +1,10 @@
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitOccultist
+  name: Formal dark blue jumpsuit 
+  description: An uniform for an unknown group of crewmates.
+  components:
+  - type: Sprite
+    sprite: Tucano/Clothing/Uniforms/Jumpsuit/Occultists/occultists_jumpsuit.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/Uniforms/Jumpsuit/Occultists/occultists_jumpsuit.rsi

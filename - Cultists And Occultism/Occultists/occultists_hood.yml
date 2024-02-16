@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodOccultist
+  name: Occultist Hood
+  description: A universal hood for the occultist cloak, must be kept on at all times.
+  components:
+  - type: Sprite
+    sprite: Tucano/Clothing/Head/Hoods/Occultists/occultists_hood.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/Head/Hoods/Occultists/occultists_hood.rsi

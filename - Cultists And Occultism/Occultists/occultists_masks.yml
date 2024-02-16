@@ -1,0 +1,45 @@
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskGasOccultistLeader
+  name: Leader Occultist's Mask
+  description: A golden mask in the shape of a face, must be kept on at all times.
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: Tucano/Clothing/Mask/Occultists/leader_mask.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/Mask/Occultists/leader_mask.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.85
+        Piercing: 0.75
+        Heat: 0.85
+  - type: EyeProtection
+  - type: BreathMask
+  - type: IdentityBlocker
+
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskGasOccultistMember
+  name: Occultist's Mask
+  description: A mask in the shape of a face, must be kept on at all times.
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: Tucano/Clothing/Mask/Occultists/member_mask.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/Mask/Occultists/member_mask.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+  - type: EyeProtection
+  - type: BreathMask
+  - type: IdentityBlocker

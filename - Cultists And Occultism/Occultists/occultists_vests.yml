@@ -1,0 +1,39 @@
+- type: entity
+  parent: ClothingOuterBaseLarge
+  id: ClothingOuterVestOccultistLeader
+  name: Leader Occultist's Vest
+  description: A golden vest with reinforced plates underneath, gives a menacing aura, as well plenty of protection.
+  components:
+  - type: Sprite
+    sprite: Tucano/Clothing/OuterClothing/Vests/Occultists/leader_vest.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/OuterClothing/Vests/Occultists/leader_vest.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.4
+        Piercing: 0.4
+        Heat: 0.7 
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+
+- type: entity
+  parent: ClothingOuterBaseLarge
+  id: ClothingOuterVestOccultistMember
+  name: Occultist's Vest
+  description: A vest with reinforced plates underneath, gives a menacing aura, as well decent protection.
+  components:
+  - type: Sprite
+    sprite: Tucano/Clothing/OuterClothing/Vests/Occultists/member_vest.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/OuterClothing/Vests/Occultists/member_vest.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.9
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
