@@ -1,6 +1,7 @@
 - type: entity
-  name: NanoTrasen-Brand Grenade Launcher
-  parent: [BaseWeaponLauncher, BaseWeaponRevolver]
+  name: Automatic Grenade Launcher
+  suffix: Japan-Riveru
+  parent: BaseWeaponLauncher
   id: WeaponLauncherNT
   description: A NanoTrasen-Brand, Revolver-Type Grenade Launcher, holds six shells of grenades.
   components:
@@ -13,8 +14,8 @@
     sprite: Tucano/Objects/Weapons/Guns/Launchers/nt_mgl.rsi
   - type: AmmoCounter
   - type: Gun
-    fireRate: 1
-    selectedMode: SemiAuto
+    fireRate: 2
+    selectedMode: FullAuto
     availableModes:
       - SemiAuto
       - FullAuto
