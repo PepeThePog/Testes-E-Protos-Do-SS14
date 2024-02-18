@@ -1,0 +1,49 @@
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitSCybersun
+  name: Cybersun's Standard-Model Hardsuit Helmet
+  description: The helmet of the cybersun's standard hardsuit.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: Tucano/Clothing/Head/Hardsuits/cybersun_hardsuit_helmet.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/Head/Hardsuits/cybersun_hardsuit_helmet.rsi
+  - type: PointLight
+    color: red
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    coefficient: 0.005
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitCybersunMedic
+  name: Cybersun's Medical Hardsuit Helmet
+  description: The helmet of the cybersun's medical hardsuit.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: Tucano/Clothing/Head/Hardsuits/cybersun_medsuit_helmet.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/Head/Hardsuits/cybersun_medsuit_helmet.rsi
+  - type: PointLight
+    color: cyan
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9

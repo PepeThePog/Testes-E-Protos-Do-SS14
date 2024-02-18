@@ -1,8 +1,9 @@
 - type: entity
   name: Alternate
-  description: The pure form of a killing machine, had enough trying to make you end yourself, he's doing it for you. Nothing Is Worth The Risk.
+  suffix: Sounds
+  description: Nothing Is Worth The Risk.
   parent: MobXeno
-  id: MobAlternate
+  id: MobAlternateAlt
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -16,8 +17,8 @@
       0: Alive
       450: Dead
   - type: MovementSpeedModifier
-    baseWalkSpeed: 6
-    baseSprintSpeed: 2 # Basicamente um sprint alternativo
+    baseWalkSpeed: 2
+    baseSprintSpeed: 5
   - type: MeleeWeapon
     altDisarm: true
     soundHit:
@@ -55,3 +56,21 @@
     tags:
     - CannotSuicide
     - DoorBumpOpener
+  - type: SpamEmitSound
+    sound:
+      params:
+        volume: -5
+      collection: alternate
+
+- type: soundCollection
+  id: alternate
+  files:
+    - /Audio/Voice/Alternate/alternate_1.ogg
+    - /Audio/Voice/Alternate/alternate_2.ogg
+    - /Audio/Voice/Alternate/alternate_3.ogg
+    - /Audio/Voice/Alternate/alternate_4.ogg
+    - /Audio/Voice/Alternate/alternate_5.ogg
+    - /Audio/Voice/Alternate/alternate_6.ogg
+    - /Audio/Voice/Alternate/alternate_7.ogg
+    - /Audio/Voice/Alternate/alternate_8.ogg
+

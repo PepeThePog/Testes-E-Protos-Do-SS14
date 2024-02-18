@@ -1,0 +1,58 @@
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitCybersun
+  name: Cybersun's Standard-Model Hardsuit
+  description: The standard of high-tech in which cybersun works with, rare, and efficient.
+  components:
+  - type: Sprite
+    sprite: Tucano/Clothing/OuterClothing/Hardsuits/cybersun_hardsuit.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/OuterClothing/Hardsuits/cybersun_hardsuit.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    coefficient: 0.001
+  - type: ExplosionResistance
+    damageCoefficient: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.2
+        Radiation: 0.01
+        Caustic: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 1.0
+    sprintModifier: 1.0
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitSCybersun
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndie
+  id: ClothingOuterHardsuitCybersunMedic
+  name: Cybersun's Medical Hardsuit
+  description: A variant of the standard cybersun standard hardsuit, made to serve the paramedic units of the corporation.
+  components:
+  - type: Sprite
+    sprite: Tucano/Clothing/OuterClothing/Hardsuits/cybersun_medsuit.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/OuterClothing/Hardsuits/cybersun_medsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCybersunMedic
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.4
+        Radiation: 0.01
+        Caustic: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 1.0
+    sprintModifier: 1.0
+  - type: HeldSpeedModifier

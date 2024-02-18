@@ -13,6 +13,10 @@
   - type: Clothing
     sprite: Tucano/Objects/Weapons/Guns/Launchers/nt_mgl.rsi
   - type: AmmoCounter
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -20
   - type: Gun
     fireRate: 2
     selectedMode: FullAuto
