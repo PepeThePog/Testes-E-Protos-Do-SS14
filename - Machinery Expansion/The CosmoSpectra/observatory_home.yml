@@ -1,0 +1,30 @@
+- type: entity
+  id: MachineCosmoSpectraObservatoryStarGazer
+  parent: BaseMachinePowered
+  name: The CosmoSpectra Observatory
+  description: An incredibly high tech piece of equipment, seems to display a location in space. This one has an ominous figure in the distance.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Tucano/Structures/Machines/observatory_home.rsi
+    layers:
+    - state: icon
+    - state: unshaded
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: AmbientSound
+    enabled: true
+    sound:
+      path: /Audio/Machines/observatory_2.ogg
+    range: 6
+    volume: -5
+  - type: PointLight
+    radius: 2.5
+    energy: 3
+    castShadows: false
+    color: "#9c5eff"
+  - type: StaticPrice
+    price: 15000

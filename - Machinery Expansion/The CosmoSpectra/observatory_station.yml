@@ -1,0 +1,30 @@
+- type: entity
+  id: MachineCosmoSpectraObservatoryStation
+  parent: BaseMachinePowered
+  name: The CosmoSpectra Observatory
+  description: An incredibly high tech piece of equipment, seems to display a location in space. You can recognize your station in there!
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Tucano/Structures/Machines/observatory_station.rsi
+    layers:
+    - state: icon
+    - state: unshaded
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: AmbientSound
+    enabled: true
+    sound:
+      path: /Audio/Machines/observatory_3.ogg
+    range: 6
+    volume: -5
+  - type: PointLight
+    radius: 2.5
+    energy: 3
+    castShadows: false
+    color: "#5aa690"
+  - type: StaticPrice
+    price: 15000
