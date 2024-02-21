@@ -1,0 +1,68 @@
+﻿- type: entity
+  parent: BaseMobArgocyte
+  id: MobCaveGeist
+  name: Cave Geist
+  description: A beast of a creature, you surely don't want to go and fight it, do you?
+  suffix: AI
+  components:
+  - type: Sprite
+    sprite: Tucano/Mobs/Aliens/cave_geist.rsi
+    layers:
+      - state: alive
+        map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.75
+        density: 300
+        mask:
+          - MobMask
+        layer:
+          - MobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      500: Dead
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/geist_attack.ogg
+    damage:
+      types:
+        Blunt: 25
+        Slash: 25
+        Structural: 250 #Vive em cavernas, então tem que quebrar elas facilmente
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 5
+    baseWalkSpeed: 3
+  - type: GhostRole
+    allowMovement: true
+    makeSentient: true
+    name: Cave Geist
+    description: Um monstro das cavernas com sede de sangue.
+  - type: Devourer
+    foodPreference: Humanoid
+    shouldStoreDevoured: true
+    chemical: Omnizine
+    healRate: 55.0
+    whitelist:
+      components:
+      - MobState
+      - Door
+      tags:
+      - Wall
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepThud
