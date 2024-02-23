@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingOuterCoatCybersun
+  name: Cybersun WindBreaker
+  description: A snazzy, comfy and light coat, used mostly by the Cybersun employees.
+  components:
+  - type: Sprite
+    sprite: Tucano/Clothing/OuterClothing/WinterCoats/cybersun_coat.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/OuterClothing/WinterCoats/cybersun_coat.rsi

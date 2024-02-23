@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: UniformJumpsuitCybersun
+  name: Cybersun's Standard Jumpsui
+  description: A very comfy blue and black jumpsuit with a red sun on the middle, very stylish.
+  components:
+  - type: Sprite
+    sprite: Tucano/Clothing/Uniforms/Jumpsuit/cybersun_jumpsuit.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/Uniforms/Jumpsuit/cybersun_jumpsuit.rsi

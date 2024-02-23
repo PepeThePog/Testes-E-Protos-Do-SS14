@@ -1,14 +1,14 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from TGStation Marine Corps",
+  "copyright": "Taken from CM15",
   "size": {
-    "x": 64,
-    "y": 64
+    "x": 48,
+    "y": 48
   },
   "states": [
     {
-      "name": "truck_cargo",
+      "name": "truck_v2",
       "directions": 4
     }
   ]
