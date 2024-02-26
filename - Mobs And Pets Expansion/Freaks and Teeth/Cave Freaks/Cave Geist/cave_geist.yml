@@ -8,14 +8,19 @@
   - type: Sprite
     sprite: Tucano/Mobs/Aliens/cave_geist.rsi
     layers:
+      - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+        state: eyes
+        shader: unshaded
       - state: alive
         map: ["enum.DamageStateVisualLayers.Base"]
   - type: DamageStateVisuals
     states:
       Alive:
         Base: alive
+        BaseUnshaded: eyes
       Dead:
         Base: dead
+        BaseUnshaded: eyes_dead
   - type: Fixtures
     fixtures:
       fix1:
@@ -66,3 +71,5 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepThud
+  - type: ReplacementAccent
+    accent: genericAggressive

@@ -1,0 +1,55 @@
+- type: tile
+  id: FloorMetalTunnel
+  name: tunnel floor
+  sprite: /Textures/Tucano/Tiles/tunnelintact.png
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  
+- type: tile
+  id: FloorMetalTunnelRusty
+  name: rusty tunnel floor
+  sprite: /Textures/Tucano/Tiles/tunnelrusty.png
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  
+- type: tile
+  id: FloorMetalTunnelWasteland
+  name: wasteland tunnel floor
+  sprite: /Textures/Tucano/Tiles/tunnelwasteland.png
+  variants: 11
+  placementVariants: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10]
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+
+# extra
+
+- type: tile
+  id: FloorRubble
+  name: rubble
+  sprite: /Textures/Tucano/Tiles/rubble.png
+  baseTurf: space
+  isSubfloor: false
+  canCrowbar: false
+  footstepSounds:
+    collection: FootstepAsteroid
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000

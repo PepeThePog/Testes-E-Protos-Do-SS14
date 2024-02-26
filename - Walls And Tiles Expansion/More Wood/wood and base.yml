@@ -1,0 +1,92 @@
+- type: tile
+  id: FloorWasteland
+  name: wasteland
+  sprite: /Textures/Tucano/Tiles/wasteland.png
+  variants: 4
+  placementVariants: [0, 1, 2, 3]
+  baseTurf: space
+  isSubfloor: false
+  canCrowbar: false
+  footstepSounds:
+    collection: FootstepAsteroid
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorWoodOak
+  name: wood oak
+  sprite: /Textures/Tucano/Tiles/oak.png
+  variants: 4
+  placementVariants: [0, 1, 2, 3]
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: BarestepWood
+  friction: 0.30
+  itemDrop: FloorTileItemWoodOak
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorWoodOakBroken
+  name: wood oak broken
+  sprite: /Textures/Tucano/Tiles/oakbroken.png
+  variants: 4
+  placementVariants: [0, 1, 2, 3]
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: BarestepWood
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorWoodHouse
+  name: wood house
+  sprite: /Textures/Tucano/Tiles/woodhouse.png
+  variants: 4
+  placementVariants: [0, 1, 2, 3]
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: BarestepWood
+  friction: 0.30
+  itemDrop: FloorTileItemWoodHouse
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorWoodHouseBroken
+  name: wood house broken
+  sprite: /Textures/Tucano/Tiles/woodhousebroken.png
+  variants: 2
+  placementVariants: [0, 1]
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: BarestepWood
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorWoodMaple
+  name: wood maple
+  sprite: /Textures/Tucano/Tiles/maple.png
+  variants: 4
+  placementVariants: [0, 1, 2, 3]
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: BarestepWood
+  friction: 0.30
+  itemDrop: FloorTileItemWoodMaple
+  thermalConductivity: 0.04
+  heatCapacity: 10000

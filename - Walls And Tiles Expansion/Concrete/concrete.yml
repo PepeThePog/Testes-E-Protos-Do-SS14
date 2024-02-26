@@ -1,0 +1,72 @@
+- type: tile
+  id: FloorConcreteAlt
+  name: concrete
+  sprite: /Textures/Tucano/Tiles/concrete.png
+  variants: 6
+  placementVariants: [0, 1, 2, 3, 4, 5]
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorConcreteTileGoon
+  name: concrete tile
+  sprite: /Textures/Tucano/Tiles/concrete-goon.png
+  variants: 1
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorConcreteGreyBay
+  name: concrete grey
+  sprite: /Textures/Tucano/Tiles/concrete-bay.png
+  variants: 1
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorConcreteDarkAlt
+  name: concrete dark
+  sprite: /Textures/Tucano/Tiles/concretedark.png
+  variants: 6
+  placementVariants: [0, 1, 2, 3, 4, 5]
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorConcreteRoad
+  name: concrete road
+  sprite: /Textures/Tucano/Tiles/concreteroad.png
+  variants: 6
+  placementVariants: [0, 1, 2, 3, 4, 5]
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
