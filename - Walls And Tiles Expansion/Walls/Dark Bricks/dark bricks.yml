@@ -1,0 +1,20 @@
+- type: entity
+  parent: BaseWall
+  id: WallDarkBrick
+  name: Dark Brick Wall
+  components:
+  - type: Sprite
+    sprite: Tucano/Structures/Walls/dark_bricks.rsi
+  - type: Icon
+    sprite: Tucano/Structures/Walls/dark_bricks.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: walls
+    base: brick

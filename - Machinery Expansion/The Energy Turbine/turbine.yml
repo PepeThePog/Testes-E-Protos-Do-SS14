@@ -1,0 +1,50 @@
+- type: entity
+  parent: BaseGenerator
+  id: GeneratorEnergyTurbine
+  name: EMTG-14 Energy Turbine
+  description: A heavy, powerful thermoelectric generator.
+  components:
+  - type: PowerSupplier
+    supplyRate: 85000
+  - type: Sprite
+    sprite: Tucano/Structures/Turbine/energy_turbine.rsi
+    state: turbine_on
+  - type: PowerMonitoringDevice
+    sprite: Tucano/Structures/Turbine/energy_turbine.rsi
+    state: turbine_on
+  - type: AmbientSound
+    range: 9
+    sound:
+      path: /Audio/Ambience/Objects/turbine_loop.ogg
+  - type: PacifismDangerousAttack
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 450
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ExplodeBehavior
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 2
+    totalIntensity: 200
+  - type: StaticPrice
+    price: 500
+  - type: Electrified
+    onHandInteract: false
+    onInteractUsing: false
+    onBump: true
+    requirePower: true
+    highVoltageNode: output

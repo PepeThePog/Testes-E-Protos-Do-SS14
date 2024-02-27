@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken From Nuclear14",
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "ruin0",
+            "directions": 4
+        },
+        {
+            "name": "ruin1",
+            "directions": 4
+        },
+        {
+            "name": "ruin2",
+            "directions": 4
+        },
+        {
+            "name": "ruin3",
+            "directions": 4
+        },
+        {
+            "name": "ruin4",
+            "directions": 4
+        },
+        {
+            "name": "ruin5",
+            "directions": 4
+        },
+        {
+            "name": "ruin6",
+            "directions": 4
+        },
+        {
+            "name": "ruin7",
+            "directions": 4
+        }
+    ]
+}

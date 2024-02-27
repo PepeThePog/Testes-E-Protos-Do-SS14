@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 96
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken From CM15",
+  "states": [
+    {
+      "name": "turbine_support_l"
+    }
+  ]
+}

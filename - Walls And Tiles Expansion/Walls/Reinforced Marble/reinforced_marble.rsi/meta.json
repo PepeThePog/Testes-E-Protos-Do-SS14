@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken From Nuclear14",
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "rmarble0",
+            "directions": 4
+        },
+        {
+            "name": "rmarble1",
+            "directions": 4
+        },
+        {
+            "name": "rmarble2",
+            "directions": 4
+        },
+        {
+            "name": "rmarble3",
+            "directions": 4
+        },
+        {
+            "name": "rmarble4",
+            "directions": 4
+        },
+        {
+            "name": "rmarble5",
+            "directions": 4
+        },
+        {
+            "name": "rmarble6",
+            "directions": 4
+        },
+        {
+            "name": "rmarble7",
+            "directions": 4
+        }
+    ]
+}

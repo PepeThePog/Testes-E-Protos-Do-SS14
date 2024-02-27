@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "xanu_shell_magazine_buckshot"
+    },
+    {
+      "name": "xanu_shell_magazine_buckshot-1"
+    },
+    {
+      "name": "xanu_shell_magazine_buckshot-0"
+    },
+    {
+      "name": "xanu_shell_magazine_incendiary"
+    },
+    {
+      "name": "xanu_shell_magazine_incendiary-1"
+    },
+    {
+      "name": "xanu_shell_magazine_incendiary-0"
+    },
+    {
+      "name": "xanu_shell_magazine_beanbag"
+    },
+    {
+      "name": "xanu_shell_magazine_beanbag-1"
+    },
+    {
+      "name": "xanu_shell_magazine_beanbag-0"
+    },
+    {
+      "name": "xanu_shell_magazine_slug"
+    },
+    {
+      "name": "xanu_shell_magazine_slug-1"
+    },
+    {
+      "name": "xanu_shell_magazine_slug-0"
+    },
+    {
+      "name": "xanu_shell_magazine_emp"
+    },
+    {
+      "name": "xanu_shell_magazine_emp-1"
+    },
+    {
+      "name": "xanu_shell_magazine_emp-0"
+    },
+    {
+      "name": "xanu_shell_magazine_stun"
+    },
+    {
+      "name": "xanu_shell_magazine_stun-1"
+    },
+    {
+      "name": "xanu_shell_magazine_stun-0"
+    },
+    {
+      "name": "xanu_shell_magazine_tracker"
+    },
+    {
+      "name": "xanu_shell_magazine_tracker-1"
+    },
+    {
+      "name": "xanu_shell_magazine_tracker-0"
+    },
+    {
+      "name": "xanu_shell_magazine"
+    },
+    {
+      "name": "xanu_shell_magazine-1"
+    },
+    {
+      "name": "xanu_shell_magazine-0"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "xanu_shotgun_wielded_rh",
+      "directions": 4
+    },
+    {
+      "name": "xanu_shotgun_wielded_lh",
+      "directions": 4
+    },
+    {
+      "name": "xanu_shotgun_rh",
+      "directions": 4
+    },
+    {
+      "name": "xanu_shotgun_lh",
+      "directions": 4
+    },
+    {
+      "name": "xanu_shotgun_ss",
+      "directions": 4
+    },
+    {
+      "name": "xanu_shotgun_ba",
+      "directions": 4
+    },
+    {
+      "name": "xanu_shotgun"
+    },
+    {
+      "name": "xanu_shotgun-empty"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+- type: entity
+  parent: BaseWall
+  id: WallMarble
+  name: Marble Wall
+  components:
+  - type: Sprite
+    sprite: Tucano/Structures/Walls/marble.rsi
+  - type: Icon
+    sprite: Tucano/Structures/Walls/marble.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: walls
+    base: marble

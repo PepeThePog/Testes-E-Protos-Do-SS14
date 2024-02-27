@@ -1,0 +1,33 @@
+- type: entity
+  id: MetalDoorAlt
+  name: secure metal door
+  parent: BaseMaterialDoor
+  description: A door made of iron, secured with another block of iron, very sturdy.
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Tucano/Structures/Doors/MineralDoors/altmetaldoor.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+    openSound:
+      path: /Audio/Tucano/Effects/altmetaldoor_open.ogg
+    closeSound:
+      path: /Audio/Tucano/Effects/altmetaldoor_close.ogg
+
+- type: entity
+  id: WoodDoorAlt
+  name: secure wooden door
+  parent: WoodDoor
+  description: It's a door, made out of wood.
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Tucano/Structures/Doors/MineralDoors/altwooddoor.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+    openSound:
+      path: /Audio/Tucano/Effects/altwooddoor_open.ogg
+    closeSound:
+      path: /Audio/Tucano/Effects/altwooddoor_close.ogg
