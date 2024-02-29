@@ -2,7 +2,7 @@
   id: PropVehicleTruckCargo
   parent: BaseStructure
   name: Cargo Truck
-  description: It's a Truck, but it doesn't drive anymore, although the engine is still on. This one has some crates, they seem empty.
+  description: It's a Truck, but it doesn't drive anymore, although the engine is still on. This one has a compartment for cargo and other things, it seems empty.
   placement:
     mode: AlignTileAny
   components:

@@ -1,0 +1,102 @@
+- type: entity
+  name: NanoTrasen Battle Drone
+  description: A giant battle drone, used for attacking and defending stations.
+  id: DroneBattleNanoTrasen
+  parent: PlayerSiliconBase
+  components:
+  - type: InnateTool
+    tools:
+      - id: WeaponMinigun
+      - id: WeaponLauncherMultipleRocket
+  - type: PointLight
+    enabled: true
+    color: "#003cff"
+    radius: 2.0
+    energy: 5.0
+  - type: UserInterface
+    interfaces:
+    - key: enum.StrippingUiKey.Key
+      type: StrippableBoundUserInterface
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 5
+    baseSprintSpeed : 7
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      400: Dead
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Tucano/Mobs/Silicon/battle_drone_nt.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+  - type: MovementIgnoreGravity
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 1
+        density: 160
+        mask:
+        - LargeMobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: CombatMode
+
+- type: entity
+  name: Syndicate Battle Drone
+  description: A giant battle drone, used for attacking NanoTrasen's stations and outposts.
+  id: DroneBattleSyndicate
+  parent: PlayerSiliconBase
+  components:
+  - type: InnateTool
+    tools:
+      - id: WeaponMinigun
+      - id: WeaponLauncherMultipleRocket
+  - type: PointLight
+    enabled: true
+    color: "#ff0000"
+    radius: 2.0
+    energy: 5.0
+  - type: UserInterface
+    interfaces:
+    - key: enum.StrippingUiKey.Key
+      type: StrippableBoundUserInterface
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 5
+    baseSprintSpeed : 7
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      400: Dead
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Tucano/Mobs/Silicon/battle_drone_synd.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+  - type: MovementIgnoreGravity
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 1
+        density: 160
+        mask:
+        - LargeMobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: CombatMode
