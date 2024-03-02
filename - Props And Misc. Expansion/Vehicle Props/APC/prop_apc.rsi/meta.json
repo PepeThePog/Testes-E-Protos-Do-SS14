@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken From TGStation Marine Corps",
+    "size": {
+        "x": 128,
+        "y": 128
+    },
+    "states": [
+        {
+            "name": "apc"
+        }
+    ]
+}

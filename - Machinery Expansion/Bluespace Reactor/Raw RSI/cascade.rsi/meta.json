@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 96,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "cascade_tap",
+      "delays": [
+        [
+          1.5,
+          0.1,
+          0.3,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+
+- type: entity
+  id: SMESIndustrialTurbine
+  parent: BaseMachine
+  name: Industrial SMES
+  description: It's a big boy Industrial SMES. Much bigger and more powerful than the usual white variant.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Sprite
+      sprite: Tucano/Structures/Power/transformer.rsi
+      snapCardinals: true
+      layers:
+        - state: transformer
+    - type: Smes
+    - type: Appearance
+    - type: Battery
+      startingCharge: 16000000
+      maxCharge: 16000000
+    - type: ExaminableBattery
+    - type: NodeContainer
+      examinable: true
+      nodes:
+        input:
+          !type:CableTerminalPortNode
+          nodeGroupID: HVPower
+        output:
+          !type:CableDeviceNode
+          nodeGroupID: HVPower
+    - type: PowerMonitoringDevice
+      group: SMES
+      sourceNode: input
+      loadNode: output
+      collectionName: smes
+      sprite: Tucano/Structures/Power/transformer.rsi
+      state: static
+    - type: BatteryDischarger
+      voltage: High
+      node: output
+    - type: BatteryCharger
+      voltage: High
+      node: input
+    - type: PowerNetworkBattery
+      maxSupply: 350000
+      maxChargeRate: 15000
+      supplyRampTolerance: 10000
+      supplyRampRate: 10000
+    - type: WiresPanel
+    - type: Wires
+      boardName: wires-board-name-smes
+      layoutId: SMES
+    - type: StationInfiniteBatteryTarget
+    - type: Electrified
+      onHandInteract: false
+      onInteractUsing: false
+      onBump: true
+      requirePower: true
+      highVoltageNode: input
+      mediumVoltageNode: output
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 4
+            max: 14
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: AmbientSound
+    range: 9
+    sound:
+      path: /Audio/Ambience/Objects/turbine_loop.ogg
+  - type: PacifismDangerousAttack

@@ -1,0 +1,62 @@
+# Achou que era um tanque de verdade? Não, só uma decoração.
+- type: entity
+  id: StructurePropTank
+  name: SYAV-14A6 Light Tank
+  description: A forgotten model of a light tank. Used by The Syndicate at some point, doesn't work anymore, but its engine is still working.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: Tucano/Structures/Decoration/prop_tank.rsi
+    layers:
+      - state: tank
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-1.5,1.5,1.5"
+        density: 40
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: AmbientSound
+    enabled: true
+    volume: -2
+    range: 6
+    sound:
+      path: /Audio/Ambience/Objects/tank_idle.ogg
+
+- type: entity
+  id: StructurePropTankDestroyed
+  name: Destroyed SYAV-14A6 Light Tank
+  description: A forgotten model of a light tank. Used by The Syndicate at some point, doesn't work anymore. This one is destroyed.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: Tucano/Structures/Decoration/prop_tank_destroyed.rsi
+    layers:
+      - state: tank_destroyed
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-1.5,1.5,1.5"
+        density: 40
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer

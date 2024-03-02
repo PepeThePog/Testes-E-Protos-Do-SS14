@@ -1,0 +1,65 @@
+- type: entity
+  id: ShellShotgunHotshot
+  name: hotshot shell (.50)
+  description: An experimental and powerful shell with an inner battery and laser concentration system.
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - ShellShotgun
+  - type: CartridgeAmmo
+    count: 8
+    spread: 16
+    soundEject:
+      collection: ShellEject
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Ammunition/Casings/hotshot_shell.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+
+- type: entity
+  name: hotshot (.50)
+  id: PelletShotgunHotshot
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    layers:
+    - state: bolt
+  - type: Projectile
+    soundHit:
+    impactEffect: BulletImpactEffectHotshot
+    damage:
+      types:
+        Heat: 12
+  - type: StaminaDamageOnCollide
+    damage: 40
+  - type: PointLight
+    enabled: true
+    color: "#FF8080"
+    radius: 25.0
+    energy: 10.0
+
+- type: entity
+  id: BulletImpactEffectHotshot
+  noSpawn: true
+  components:
+    - type: TimedDespawn
+      lifetime: 0.2
+    - type: Sprite
+      drawdepth: Effects
+      layers:
+        - shader: unshaded
+          map: ["enum.EffectLayers.Unshaded"]
+          sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+          state: impact_laser
+    - type: EffectVisuals
+    - type: Tag
+      tags:
+        - HideContextMenu

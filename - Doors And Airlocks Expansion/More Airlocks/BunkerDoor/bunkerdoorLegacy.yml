@@ -1,0 +1,32 @@
+- type: entity
+  parent: Airlock
+  id: AirlockDarkMetalBunker
+  suffix: DarkMetal
+  description: It opens, it closes, and it might crush you.
+  components:
+  - type: Door
+    crushDamage:
+      types:
+        Blunt: 25
+    openSound:
+      path: /Audio/Machines/airlock_ext_open.ogg
+    closeSound:
+      path: /Audio/Machines/airlock_ext_close.ogg
+    denySound:
+      path: /Audio/Machines/airlock_deny.ogg
+  - type: Sprite
+    sprite: Tucano/Structures/Doors/Airlocks/bunkerdoor.rsi
+
+- type: entity
+  parent: AirlockExternal
+  id: AirlockGlassDarkMetalBunker
+  suffix: DarkMetal
+  components:
+  - type: Door
+    occludes: false
+  - type: Occluder
+    enabled: false
+  - type: Sprite
+    sprite: Tucano/Structures/Doors/Airlocks/bunkerdoor.rsi
+  - type: PaintableAirlock
+    group: ExternalGlass

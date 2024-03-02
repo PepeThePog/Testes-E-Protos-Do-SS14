@@ -1,0 +1,71 @@
+- type: entity
+  id: PowerBluespaceReactorAlt
+  parent: BaseGenerator
+  name: Bluespace Reactor
+  description: A High-Tech Reactor that uses ancible crystals fuel cells.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: Tucano/Structures/Power/Generation/reactor.rsi
+    layers:
+      - state: on
+      - sprite: Tucano/Structures/Power/Generation/reactor.rsi
+        state: on_flash
+        shader: unshaded
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-1.5,1.5,1.5"
+        density: 50
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 450
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          AnomalyBluespace:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: Anchorable
+  - type: Explosive
+    explosionType: Cryo
+    intensitySlope: 15
+    maxIntensity: 120
+  - type: Appearance
+  - type: PointLight
+    radius: 5.5
+    energy: 12.5
+    castShadows: false
+    color: "#0095ff"
+  - type: AmbientSound
+    range: 8
+    sound:
+      path: /Audio/Ambience/Objects/reactor.ogg
+  - type: StaticPrice
+    price: 95000 # Raro e Valioso
+  - type: PowerMonitoringDevice
+    sprite: Tucano/Structures/Power/Generation/reactor.rsi
+    state: on_flash
+  - type: PowerSupplier
+    supplyRate: 200000

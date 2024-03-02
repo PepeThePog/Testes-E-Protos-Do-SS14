@@ -1,0 +1,62 @@
+# Achou que era um tanque de verdade? Não, só uma decoração.
+- type: entity
+  id: StructurePropTankAlt
+  name: NTAV-14A9 Light Tank
+  description: A modern, yet forgotten model of a light tank. It's used mostly for display, since it doesn't work anymore, but its engine is still on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: Tucano/Structures/Decoration/prop_alttank.rsi
+    layers:
+      - state: tank
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-1.5,1.5,1.5"
+        density: 40
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: AmbientSound
+    enabled: true
+    volume: -2
+    range: 6
+    sound:
+      path: /Audio/Ambience/Objects/tank_idle.ogg
+
+- type: entity
+  id: StructurePropTankDestroyedAlt
+  name: Destroyed NTAV-14A9 Light Tank
+  description: A modern, yet forgotten model of a light tank. This one is destroyed.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: Tucano/Structures/Decoration/prop_alttank_destroyed.rsi
+    layers:
+      - state: tank_destroyed
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-1.5,1.5,1.5"
+        density: 40
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer

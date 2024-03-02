@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken From Paradise13",
+  "size": {
+    "x": 96,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "reactor"
+    },
+    {
+      "name": "off",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+{
+  "name": "on",
+  "delays": [
+    [
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ]
+  ]
+},
+{
+  "name": "warning",
+  "delays": [
+    [
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ]
+  ]
+},
+{
+  "name": "fuck",
+  "delays": [
+    [
+      1.5,
+      0.1,
+      0.3,
+      0.1
+    ]
+  ]
+},
+{
+  "name": "on_flash",
+  "delays": [
+    [
+      0.2,
+      0.1,
+      0.05,
+      0.05,
+      0.2,
+      0.08
+    ]
+  ]
+}
+]
+}
+
+
+    

@@ -1,0 +1,77 @@
+﻿- type: entity
+  id: StructurePropTruck
+  parent: BaseStructure
+  name: SLGV-T14 Flat-Bed Truck
+  description: It's a Truck, but it doesn't drive anymore, although the engine is still one.
+  placement:
+    mode: AlignTileAny
+  components:
+  - type: AmbientSound
+    enabled: true
+    volume: 1
+    range: 8
+    sound:
+      path: /Audio/Ambience/Objects/truck_idle.ogg
+  - type: Sprite
+    sprite: Tucano/Structures/Decoration/prop_truck.rsi
+    state: truck
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-1.5,1.5,1.5"
+        density: 50
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 450
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Breakage"]
+
+- type: entity
+  id: StructurePropTruckCargo
+  parent: BaseStructure
+  name: SLGV-T14 Cargo Truck
+  description: It's a Truck, but it doesn't drive anymore, although the engine is still on. This one has a compartment for cargo and other things, it seems empty.
+  placement:
+    mode: AlignTileAny
+  components:
+  - type: AmbientSound
+    enabled: true
+    volume: 1
+    range: 8
+    sound:
+      path: /Audio/Ambience/Objects/truck_idle.ogg
+  - type: Sprite
+    sprite: Tucano/Structures/Decoration/prop_truck_cargo.rsi
+    state: truck_cargo
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-1.5,1.5,1.5"
+        density: 40
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 450
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Breakage"]

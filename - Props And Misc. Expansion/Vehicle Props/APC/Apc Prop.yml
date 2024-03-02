@@ -1,0 +1,61 @@
+- type: entity
+  id: StructurePropApc
+  name: NT-T14A9 I.F.V 
+  description: A modern, non-functional model of a infantry fighting vehicle. Its engine is still working.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: Tucano/Structures/Decoration/prop_apc.rsi
+    layers:
+      - state: apc
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-1.5,1.5,1.5"
+        density: 40
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: AmbientSound
+    enabled: true
+    volume: -2
+    range: 6
+    sound:
+      path: /Audio/Ambience/Objects/apc_idle.ogg
+
+- type: entity
+  id: StructurePropApcDestroyed
+  name: Destroyed NT-T14A9 I.F.V 
+  description: A modern, non-functional model of a infantry fighting vehicle. This one is destroyed.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: Tucano/Structures/Decoration/prop_apc_destroyed.rsi
+    layers:
+      - state: apc_destroyed
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-1.5,1.5,1.5"
+        density: 40
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer

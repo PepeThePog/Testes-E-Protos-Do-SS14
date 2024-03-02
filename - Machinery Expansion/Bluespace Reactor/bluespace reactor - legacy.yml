@@ -1,0 +1,99 @@
+- type: entity
+  id: PowerBluespaceReactor
+  suffix: Do Not Use
+  name: Bluespace Reactor
+  description: A High-Tech Reactor that uses ancible crystals fuel cells.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    snapCardinals: true
+    sprite: Tucano/Structures/Power/Generation/reactor.rsi
+    state: reactor
+    layers:
+    - state: off
+    - state: on
+      map: ["display"]
+      visible: false
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-1.5,1.5,1.5"
+        density: 50
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: Anchorable
+  - type: Pullable
+  - type: AmeController
+  - type: Explosive
+    explosionType: Cryo
+    intensitySlope: 15
+    maxIntensity: 120
+  - type: ActivatableUI
+    key: enum.AmeControllerUiKey.Key
+  - type: UserInterface
+    interfaces:
+    - key: enum.AmeControllerUiKey.Key
+      type: AmeControllerBoundUserInterface
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.AmeControllerVisuals.DisplayState:
+        display:
+          Off: { state: off, visible: true }
+          On: { state: on, visible: true }
+          Warning: { state: warning, visible: true }
+          Fuck: { state: fuck, visible: true }
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      ame:
+        !type:AdjacentNode
+        nodeGroupID: AMEngine
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: PowerMonitoringDevice
+    group: Generator
+    loadNode: input
+    sprite: Tucano/Structures/Power/Generation/reactor.rsi
+    state: static
+  - type: PowerSupplier
+    supplyRate: 1500
+  - type: ContainerContainer
+    containers:
+      AmeFuel: !type:ContainerSlot {}
+  - type: Electrified
+    onHandInteract: false
+    onInteractUsing: false
+    onBump: false
+    requirePower: true
+    highVoltageNode: input
+    mediumVoltageNode: ame

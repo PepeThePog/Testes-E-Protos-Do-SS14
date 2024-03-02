@@ -1,0 +1,12 @@
+  - type: Sprite
+    noRot: true
+    sprite: Tucano/Effects/red_fog.rsi
+    drawdepth: Walls
+  - type: Physics
+    canCollide: false
+  - type: AmbientSound
+    enabled: true
+    sound:
+      path: /Audio/Effects/Weather/the_fog.ogg
+    range: 100
+    volume: -4

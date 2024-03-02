@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken From Nuclear14",
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "darkmetal0",
+            "directions": 4
+        },
+        {
+            "name": "darkmetal1",
+            "directions": 4
+        },
+        {
+            "name": "darkmetal2",
+            "directions": 4
+        },
+        {
+            "name": "darkmetal3",
+            "directions": 4
+        },
+        {
+            "name": "darkmetal4",
+            "directions": 4
+        },
+        {
+            "name": "darkmetal5",
+            "directions": 4
+        },
+        {
+            "name": "darkmetal6",
+            "directions": 4
+        },
+        {
+            "name": "darkmetal7",
+            "directions": 4
+        }
+    ]
+}

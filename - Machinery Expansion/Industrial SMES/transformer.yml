@@ -1,0 +1,59 @@
+- type: entity
+  id: EnergyTurbineTransformerSMES
+  parent: BaseSMES
+  name: Industrial SMES
+  suffix: Turbine
+  description: It's a big boy Industrial SMES. Much bigger and more powerful than the usual white variant.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Clickable
+  - type: Sprite
+    sprite: Tucano/Structures/Power/transformer.rsi
+    state: transformer
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-1.5,1.5,1.5"
+        density: 50
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: Transform
+    anchored: true
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 4
+            max: 14
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Smes
+  - type: Battery
+    maxCharge: 16000000
+    startingCharge: 16000000
+  - type: AmbientSound
+    range: 9
+    sound:
+      path: /Audio/Ambience/Objects/turbine_loop.ogg
+  - type: PacifismDangerousAttack
