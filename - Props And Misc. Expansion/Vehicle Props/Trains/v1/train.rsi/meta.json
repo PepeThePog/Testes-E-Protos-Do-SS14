@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 127,
+    "y": 75
+  },
+  "states": [
+    {
+      "name": "maglev",
+      "directions": 4
+    }
+  ]
+}

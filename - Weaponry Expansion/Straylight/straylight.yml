@@ -1,0 +1,54 @@
+- type: entity
+  name: NT-NMAS "Straylight"
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachinePistolStraylight
+  description: Small, fast, and reliable, the straylight is the next-gen Assault-Pistol. 
+  components:
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/SMGs/straylight.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Clothing
+    sprite: Tucano/Objects/Weapons/Guns/SMGs/straylight.rsi
+  - type: Gun
+    fireRate: 10
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/Tucano/Weapons/Guns/Gunshots/straylight.ogg
+    availableModes:
+    - FullAuto
+    - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistol
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistol
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

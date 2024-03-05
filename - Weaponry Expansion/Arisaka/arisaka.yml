@@ -1,0 +1,23 @@
+- type: entity
+  name: NT-AMR "Arisaka"
+  parent: BaseWeaponSniper
+  id: WeaponSniperArisaka
+  description: Made so soldiers in field aren't outsniped by some syndicate scum, the Arisaka is a surprisingly effective, powerful, and considerably cheap sniper rifle. Uses .60 Anti Materiel Ammunition.
+  components:
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Snipers/arisaka.rsi
+  - type: Clothing
+    sprite: Tucano/Objects/Weapons/Guns/Snipers/arisaka.rsi
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - CartridgeAntiMateriel
+    capacity: 5
+    proto: CartridgeAntiMateriel
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Tucano/Weapons/Guns/Gunshots/arisaka.ogg
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -20

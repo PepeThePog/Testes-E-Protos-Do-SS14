@@ -1,0 +1,28 @@
+- type: entity
+  name: NT-NGS50 "Gladstone"
+  parent: BaseWeaponShotgun
+  id: WeaponShotgunGladstone
+  description: The next generation of shotguns, the gladstone was made to be used as the new reliable for security and military units alike. Uses .50 shotgun shells.
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,4,0
+    sprite: Tucano/Objects/Weapons/Guns/Shotguns/gladstone.rsi
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Shotguns/gladstone.rsi
+  - type: Clothing
+    sprite: Tucano/Objects/Weapons/Guns/Shotguns/gladstone.rsi
+  - type: BallisticAmmoProvider
+    capacity: 9
+  - type: Tag
+    tags:
+    - WeaponShotgunKammerer
+  - type: Gun
+    fireRate: 1.5
+    soundGunshot:
+      path: /Audio/Tucano/Weapons/Guns/Gunshots/gladstone.ogg
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: -5
+    maxAngle: -5

@@ -1,0 +1,109 @@
+- type: entity
+  name: NT-BGR "Wintermute"
+  parent: BaseWeaponRifle
+  id: WeaponRifleWintermute
+  description: A modern, efficient assault rifle. Expensive, but is worth every penny. Uses .25 Caseless Ammunition.
+  components:
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Rifles/wintermute.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Tucano/Objects/Weapons/Guns/Rifles/wintermute.rsi
+  - type: Gun
+    fireRate: 7
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Tucano/Weapons/Guns/Gunshots/wintermute.ogg
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: -5
+    maxAngle: -5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineCaselessRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineCaselessRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeCaselessRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeCaselessRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: NT-SGR "Wintermute"
+  parent: BaseWeaponRifle
+  id: WeaponRifleWintermuteRubber
+  description: A modern, efficient assault rifle. Expensive, but is worth every penny. This one only accepts .25 Caseless Rubber Ammunition, used by Security.
+  components:
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Rifles/wintermute_rubber.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Tucano/Objects/Weapons/Guns/Rifles/wintermute_rubber.rsi
+  - type: Gun
+    fireRate: 4
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Tucano/Weapons/Guns/Gunshots/wintermute.ogg
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: -5
+    maxAngle: -5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineCaselessRifleShortRubber
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineCaselessRifleShortRubber
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeCaselessRifleRubber
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeCaselessRifleRubber
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
