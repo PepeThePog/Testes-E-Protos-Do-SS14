@@ -1,0 +1,15 @@
+{
+   "version": 1,
+   "license": "CC-BY-SA-3.0",
+   "copyright": "Taken from Shiptest13",
+   "size": {
+        "x": 32,
+        "y": 64
+   },
+   "states": [
+     {
+       "name": "syndie_proto"
+    }
+  ]
+}
+        

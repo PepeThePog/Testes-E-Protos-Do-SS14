@@ -1,0 +1,20 @@
+- type: entity
+  id: StructurePropSyndicateMecha
+  parent: BaseStructure
+  name: Unfinished Mecha
+  description: An unfinished model of some kind of battle mecha. Seems to belong to the syndicate.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Tucano/Structures/Decoration/syndie_proto.rsi
+    state: syndie_proto
+    drawdepth: Mobs
+    offset: "0.0,0.5"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Breakage"]

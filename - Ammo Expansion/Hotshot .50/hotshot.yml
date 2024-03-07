@@ -9,6 +9,7 @@
     tags:
     - Cartridge
     - ShellShotgun
+    - ShellShotgunHotshot
   - type: CartridgeAmmo
     count: 8
     spread: 16
@@ -63,3 +64,4 @@
     - type: Tag
       tags:
         - HideContextMenu
+

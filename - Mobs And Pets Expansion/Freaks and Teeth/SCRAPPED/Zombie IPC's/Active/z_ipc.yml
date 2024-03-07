@@ -1,0 +1,71 @@
+- type: entity
+  name: I.P.C Unit
+  id: MobIPCZombie
+  parent: [ SimpleSpaceMobBase, MobCombat ]
+  description: It's a zombified IPC Unit, its AI seems to be corrupted, and will attack anyone in sight.
+  components:
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHostileCompound
+      blackboard:
+        NavSmash: !type:Bool
+          true
+    - type: NpcFactionMember
+      factions:
+        - SimpleHostile
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Tucano/Mobs/Silicon/Zombie_IPC/grey.rsi
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+    - type: CombatMode
+    - type: Physics
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.60
+          density: 80
+          mask:
+            - FlyingMobMask
+          layer:
+            - FlyingMobLayer
+    - type: MobState
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        150: Dead
+    - type: Stamina
+      critThreshold: 100
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: alive
+          BaseUnshaded: screen
+        Dead:
+          Base: dead
+    - type: MeleeWeapon
+      altDisarm: false
+      angle: 0
+      animation: WeaponArcBite
+      soundHit:
+        path: /Audio/Tucano/Effects/z_ipc_attack.ogg
+      damage:
+        types:
+          Piercing: 15
+          Burn: 15
+          Structural: 30
+          
+- type: soundCollection
+  id: zombie_ipc
+  files:
+    - /Audio/Tucano/Voice/z_ipc/z_ipc_1.ogg
+    - /Audio/Tucano/Voice/z_ipc/z_ipc_2.ogg
+    - /Audio/Tucano/Voice/z_ipc/z_ipc_3.ogg
+    - /Audio/Tucano/Voice/z_ipc/z_ipc_4.ogg
+    - /Audio/Tucano/Voice/z_ipc/z_ipc_5.ogg
+    - /Audio/Tucano/Voice/z_ipc/z_ipc_6.ogg
