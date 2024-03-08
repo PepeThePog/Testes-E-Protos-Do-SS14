@@ -1,0 +1,122 @@
+# Dreamer SS14 Real?
+
+- type: soundCollection
+  id: wonder_offering
+  files:
+    - /Audio/Tucano/Voice/Offering/wonder_1.ogg
+    - /Audio/Tucano/Voice/Offering/wonder_2.ogg
+    - /Audio/Tucano/Voice/Offering/wonder_3.ogg
+
+- type: entity
+  id: StructurePropOccultistOffering 
+  parent: BaseMob
+  name: Occultist Offering
+  suffix: DreamerWonder
+  description: What...What the fuck is that?
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Tucano/Structures/Decoration/offering.rsi
+    state: offering_1
+    drawdepth: Mobs
+    offset: "0.0,0.5"
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Impassable
+  - type: Damageable
+    damageContainer: Biological
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      20: Critical
+      5: Dead
+  - type: LightningTarget
+    priority: 2
+    lightningExplode: false
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Breakage"]
+  - type: SolutionContainerManager
+  - type: InjectableSolution
+    solution: chemicals
+  - type: Bloodstream
+    bloodlossDamage:
+      types:
+        Bloodloss: 1
+    bloodlossHealDamage:
+      types:
+        Bloodloss: -1
+  - type: Internals
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 2
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+  - type: AtmosExposed
+  - type: Temperature
+    heatDamageThreshold: 325
+    coldDamageThreshold: 0
+    currentTemperature: 310.15
+    coldDamage: #per second, scales with temperature & other constants
+      types:
+        Cold : 0.1
+    specificHeat: 42
+    heatDamage: #per second, scales with temperature & other constants
+      types:
+        Heat : 1.5
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 500
+    sweatHeatRegulation: 2000
+    shiveringHeatRegulation: 2000
+    normalBodyTemperature: 310.15
+    thermalRegulationTemperatureThreshold: 25
+  - type: AmbientSound
+    range: 9
+    sound:
+      path: /Audio/Tucano/Voice/Offering/wonder_idle.ogg
+  - type: SpamEmitSound
+    sound:
+      params:
+        volume: -3
+      collection: wonder_offering
+
+- type: entity
+  id: StructurePropOccultistOffering2
+  parent: StructurePropOccultistOffering
+  name: Occultist Offering
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Tucano/Structures/Decoration/offering.rsi
+    state: offering_2
+    drawdepth: Mobs
+    offset: "0.0,0.5"
+
+- type: entity
+  id: StructurePropOccultistOffering3
+  parent: StructurePropOccultistOffering
+  name: Occultist Offering
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Tucano/Structures/Decoration/offering.rsi
+    state: offering_3
+    drawdepth: Mobs
+    offset: "0.0,0.5"

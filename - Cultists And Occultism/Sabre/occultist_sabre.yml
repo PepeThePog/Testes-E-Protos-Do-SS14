@@ -1,0 +1,60 @@
+- type: entity
+  name: Occultist's Sabre
+  parent: BaseItem
+  id: OccultistSabre
+  description: A threatening, silver sabre.
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Melee/sabre.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1.8
+    damage:
+      types:
+        Slash: 13
+        Piercing: 6
+    soundHit:
+        path: /Audio/Tucano/Weapons/bladeslice.ogg
+  - type: Reflect
+    enabled: true
+    reflectProb: .6
+    spread: 60
+  - type: Item
+    size: Normal
+    sprite: Tucano/Objects/Weapons/Melee/sabre.rsi
+  - type: Tag
+    tags:
+    - OccultistSabre
+  - type: DisarmMalus
+
+- type: entity
+  parent: [ClothingBeltBase, ClothingSlotBase]
+  id: ClothingBeltOccultistSabreSheath
+  name: Occultist Sabre Sheath
+  description: A leather sheath for a rather imposing sabre.
+  components:
+  - type: Sprite
+    sprite: Tucano/Clothing/Belt/sabre_sheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: Tucano/Clothing/Belt/sabre_sheath.rsi
+  - type: Item
+    size: Ginormous
+  - type: ItemSlots
+    slots:
+      item:
+        name: Sabre
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        whitelist:
+          tags:
+          - OccultistSabre
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - OccultistSabre
+  - type: Appearance

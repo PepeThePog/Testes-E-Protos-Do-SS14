@@ -1,0 +1,93 @@
+- type: entity
+  id: BarricadeSyndicate
+  description: A rather high-tech barrier, provides cover for syndicate units.
+  parent: BaseStructure
+  name: Syndicate Barrier
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: Tucano/Structures/syndicate_barrier.rsi
+    state: syndicate_barrier
+    drawdepth: BlastDoors
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb {}
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageModifierSet: Metallic
+    damageContainer: StructuralInorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel:
+            min: 6
+            max: 15
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: AtmosExposed
+  - type: Anchorable
+  - type: Pullable
+  - type: Climbable
+  - type: Bonkable
+    bonkDamage:
+      types:
+        Blunt: 15
+    bonkSound: !type:SoundCollectionSpecifier
+      collection: TrayHit
+  - type: Clickable
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepHull
+
+- type: entity
+  id: BarricadeSyndicateDamaged
+  description: A rather high-tech barrier, provides cover for syndicate units. This one won't be taking many hits
+  parent: BaseStructure
+  name: Damaged Syndicate Barrier
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: Tucano/Structures/syndicate_barrier.rsi
+    state: syndicate_barrier_2
+    drawdepth: BlastDoors
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb {}
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageModifierSet: Metallic
+    damageContainer: StructuralInorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel:
+            min: 2
+            max: 4
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: AtmosExposed
+  - type: Anchorable
+  - type: Pullable
+  - type: Climbable

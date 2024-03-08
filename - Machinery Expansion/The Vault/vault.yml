@@ -1,0 +1,50 @@
+- type: entity
+  id: MachineAlienVault
+  parent: BaseMachinePowered
+  name: ABTT-CaOSX-T14T8 "The Vault"
+  description: You can't seem to understand what kind of machinery is this, you sincerely do not like the sounds it emmits.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Tucano/Structures/Machines/vault.rsi
+    layers:
+    - state: vault
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-0.5,1.5,0.6"
+        density: 50
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: AmbientSound
+    enabled: true
+    sound:
+      path: /Audio/Tucano/Machines/vault.ogg
+    range: 6
+    volume: -6
+  - type: PointLight
+    radius: 2.8
+    energy: 9
+    castShadows: false
+    color: "#08ffa4"
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Battery
+    maxCharge: 7500000
+    pricePerJoule: 0.0003
+  - type: PowerConsumer
+    voltage: High
+    drawRate: 1000000
+  - type: StaticPrice
+    price: 980000 # Uma tecnologia tão avançada assim vale muita coisa para a Centcomm.
