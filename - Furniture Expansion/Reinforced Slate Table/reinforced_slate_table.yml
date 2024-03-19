@@ -1,0 +1,40 @@
+- type: entity
+  id: TableSlateReinforced
+  parent: TableBase
+  name: Reinforced Slate Table
+  description: A variant of the already stylish slate table, this one has been reinforced.
+  components:
+  - type: Sprite
+    sprite: Tucano/Structures/Furniture/Tables/reinforced_slate_table.rsi
+  - type: Icon
+    sprite: Tucano/Structures/Furniture/Tables/reinforced_slate_table.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 4
+            max: 6
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Climbable
+  - type: Bonkable
+    bonkDamage:
+      types:
+        Blunt: 15
+    bonkTime: 4

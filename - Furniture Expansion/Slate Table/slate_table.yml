@@ -1,0 +1,24 @@
+- type: entity
+  id: TableSlate
+  parent: TableBase
+  name: Slate Table
+  description: Sturdy and stylish.
+  components:
+  - type: Sprite
+    sprite: Tucano/Structures/Furniture/Tables/slate_table.rsi
+  - type: Icon
+    sprite: Tucano/Structures/Furniture/Tables/slate_table.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 65
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/picaxe2.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepFloor

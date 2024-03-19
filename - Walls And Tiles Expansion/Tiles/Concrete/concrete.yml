@@ -12,6 +12,7 @@
   friction: 0.30
   thermalConductivity: 0.04
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorConcreteTileGoon
@@ -26,6 +27,7 @@
   friction: 0.30
   thermalConductivity: 0.04
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorConcreteGreyBay
@@ -40,6 +42,7 @@
   friction: 0.30
   thermalConductivity: 0.04
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorConcreteDarkAlt
@@ -55,6 +58,7 @@
   friction: 0.30
   thermalConductivity: 0.04
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorConcreteRoad
@@ -70,3 +74,4 @@
   friction: 0.30
   thermalConductivity: 0.04
   heatCapacity: 10000
+  weather: true

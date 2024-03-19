@@ -1,0 +1,17 @@
+- type: entity
+  abstract: true
+  parent: BaseStructure
+  id: AltBarricadeBase
+  components:
+  - type: Anchorable
+  - type: Appearance
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb {}
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer

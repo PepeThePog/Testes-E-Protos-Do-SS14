@@ -1,0 +1,13 @@
+- type: npcFaction
+  id: Faithless
+  hostile:
+    - NanoTrasen
+    - Syndicate
+    - Xeno
+    - PetsNT
+    - Zombie
+    - Revolutionary
+    - Dragon
+    - SimpleHostile
+    - SimpleNeutral
+    - Passive

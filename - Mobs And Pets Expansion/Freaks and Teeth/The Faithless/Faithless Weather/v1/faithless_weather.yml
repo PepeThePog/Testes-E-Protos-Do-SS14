@@ -1,0 +1,67 @@
+- type: weather
+  id: FaithlessStaticLight
+  sprite:
+    sprite: /Textures/Tucano/Effects/static_light.rsi
+    state: static_light
+  sound:
+    path: /Audio/Tucano/Effects/Weather/static_light.ogg
+    params:
+      loop: true
+      volume: -3
+
+- type: weather
+  id: FaithlessStaticMedium
+  sprite:
+    sprite: /Textures/Tucano/Effects/static_medium.rsi
+    state: static_medium
+  sound:
+    path: /Audio/Tucano/Effects/Weather/static_medium.ogg
+    params:
+      loop: true
+      volume: -4
+
+- type: weather
+  id: FaithlessStaticHeavy
+  sprite:
+    sprite: /Textures/Tucano/Effects/static_heavy.rsi
+    state: static_heavy
+  sound:
+    path: /Audio/Tucano/Effects/Weather/static_heavy.ogg
+    params:
+      loop: true
+      volume: -5
+
+- type: weather
+  id: FaithlessHell
+  sprite:
+    sprite: /Textures/Tucano/Effects/faithless_hell.rsi
+    state: faithless_hell
+  sound:
+    path: /Audio/Tucano/Effects/Weather/hell.ogg
+    params:
+      loop: true
+      volume: -2
+
+# Variantes
+
+- type: weather
+  id: FaithlessAltHell
+  sprite:
+    sprite: /Textures/Tucano/Effects/faithless_hell.rsi
+    state: faithless_hell
+  sound:
+    path: /Audio/Tucano/Effects/Weather/hell_alt.ogg
+    params:
+      loop: true
+      volume: -3
+
+- type: weather
+  id: FaithlessAltHellMusic
+  sprite:
+    sprite: /Textures/Tucano/Effects/faithless_hell.rsi
+    state: faithless_hell
+  sound:
+    path: /Audio/Tucano/Effects/Weather/hell_alt_m.ogg
+    params:
+      loop: true
+      volume: -3

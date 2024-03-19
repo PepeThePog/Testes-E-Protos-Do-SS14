@@ -1,0 +1,54 @@
+- type: entity
+  name: MAC-11
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineMac11
+  description: Basically a box that shoots bullets, a very retro weaponry for wannabe gangsters. Uses .9mm Ammunition.
+  components:
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/SMGs/mac11.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Clothing
+    sprite: Tucano/Objects/Weapons/Guns/SMGs/mac11.rsi
+  - type: Gun
+    fireRate: 13
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/Tucano/Weapons/Guns/Gunshots/9mm.ogg
+    availableModes:
+    - FullAuto
+    - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistol9mm
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistol9mm
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol9mm
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol9mm
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

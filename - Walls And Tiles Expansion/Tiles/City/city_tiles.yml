@@ -1,0 +1,92 @@
+- type: tile
+  id: FloorCityAsphalt
+  name: City Asphalt
+  sprite: /Textures/Tucano/Tiles/alt_asphalt.png
+  variants: 4
+  placementVariants: [0, 1, 2, 3, 4, 5]
+  baseTurf: FloorWasteland
+  isSubfloor: false
+  canCrowbar: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  weather: true
+
+- type: tile
+  id: FloorCitySidewalkFlat
+  name: City Sidewalk
+  sprite: /Textures/Tucano/Tiles/sidewalk_flat.png
+  variants: 4
+  placementVariants: [0, 1, 2, 3, 4, 5]
+  baseTurf: FloorMetalTunnel
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  weather: true
+
+- type: tile
+  id: FloorCitySidewalkBlocks
+  name: City Sidewalk
+  sprite: /Textures/Tucano/Tiles/sidewalk_blocks.png
+  variants: 3
+  placementVariants: [0, 1, 2, 3, 4]
+  baseTurf: FloorMetalTunnel
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  weather: true
+
+- type: tile
+  id: FloorCitySidewalkPavement
+  name: City Sidewalk
+  sprite: /Textures/Tucano/Tiles/sidewalk_pavement.png
+  variants: 1
+  baseTurf: FloorMetalTunnel
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  weather: true
+
+- type: tile
+  id: FloorCitySidewalkTiles
+  name: City Sidewalk
+  sprite: /Textures/Tucano/Tiles/sidewalk_tiles.png
+  variants: 1
+  baseTurf: FloorMetalTunnel
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  weather: true
+
+- type: tile
+  id: FloorCitySidewalkTilesDetail
+  name: City Sidewalk
+  sprite: /Textures/Tucano/Tiles/sidewalk_tiles_2.png
+  variants: 1
+  baseTurf: FloorMetalTunnel
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  weather: true

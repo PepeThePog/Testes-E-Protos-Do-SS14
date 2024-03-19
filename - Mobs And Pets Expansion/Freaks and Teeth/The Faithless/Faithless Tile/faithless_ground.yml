@@ -1,0 +1,14 @@
+- type: tile
+  id: FloorFaithlessGround
+  name: Corrupted Ground
+  sprite: /Textures/Tucano/Tiles/faithless_tile.png
+  variants: 1
+  baseTurf: space
+  isSubfloor: false
+  canCrowbar: false
+  footstepSounds:
+    collection: FootstepAsteroid
+  friction: 0.60
+  thermalConductivity: 1.0
+  heatCapacity: 100000
+  weather: true

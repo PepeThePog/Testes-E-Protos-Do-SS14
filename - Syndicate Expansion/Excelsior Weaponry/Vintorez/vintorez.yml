@@ -1,0 +1,67 @@
+- type: entity
+  name: EXC-ISR "Vintorez"
+  parent: BaseItem
+  id: WeaponSniperVintorez
+  description: Once fabricated by the now destroyed Excelsior Nation, the Vintorez is a hybrid of a sniper rifle and assault rifle, internally suppressed. Uses .20 Ammunition.
+  components:
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Snipers/vintorez.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: Large
+  - type: Clothing
+    sprite: Tucano/Objects/Weapons/Guns/Snipers/vintorez.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: Gun
+    minAngle: 7
+    maxAngle: 14
+    fireRate: 8
+    angleIncrease: 3
+    angleDecay: 16
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Tucano/Weapons/Guns/Gunshots/vintorez.ogg
+      params:
+        volume: -5
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: -5
+    maxAngle: -5
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/smg_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: StaticPrice
+    price: 900

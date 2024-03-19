@@ -1,0 +1,43 @@
+- type: entity
+  name: EXC-C5P "Makarov"
+  parent: BaseWeaponPistol
+  id: WeaponPistolMakarov
+  description: An Eeny, meeny, miny, tiny-tiny pistol, fabricated by the old Excelsior Faction. Uses .35 Ammunition.
+  components:
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Pistols/makarov.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Tucano/Objects/Weapons/Guns/Pistols/makarov.rsi
+  - type: Gun
+    minAngle: 2
+    maxAngle: 13
+    angleIncrease: 10
+    angleDecay: 5
+    fireRate: 4
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Tucano/Weapons/Guns/Gunshots/makarov.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistol
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistol
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol

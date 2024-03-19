@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from AuroraStation13",
+  "size": {
+    "x": 1152,
+    "y": 554
+  },
+  "states": [
+    {
+      "name": "cityscape"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+- type: entity
+  parent:
+  - BaseMobFlesh
+  - SimpleSpaceMobBase
+  id: MobForgotten
+  name: Forgotten
+  description: Forgotten by God, rejected by The Devil, adpoted by The Faithless, Fhe Forgotten is a soul in constant, silent agony, its only purpose is to serve its master.
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Faithless
+  - type: Tool
+    speed: 1.5
+    qualities:
+      - Prying
+  - type: Prying
+    pryPowered: !type:Bool
+        true
+    force: !type:Bool
+      true
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Tucano/Mobs/Demons/Faithless/forgotten.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+  - type: PressureImmunity
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 6
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Cellular: 10
+        Piercing: 15
+        Structural: 30 
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 666
+      behaviors:
+      - !type:GibBehavior { }
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+
+- type: damageModifierSet
+  id: MobForgotten
+  coefficients:
+    Blunt: 0.6
+    Slash: 0.8
+    Piercing: 0.2
+    Cold: 0.0
+    Heat: 1.55
+    Poison: 0.5
+    Radiation: 0.0
+    Asphyxiation: 0.0
+    Bloodloss: 0.0
+    Cellular: 6.0

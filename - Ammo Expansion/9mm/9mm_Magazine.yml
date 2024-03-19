@@ -1,0 +1,64 @@
+- type: entity
+  id: MagazinePistol9mm
+  name: pistol magazine (9x19mm Parabellum)
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistol9mm
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgePistol9mm
+    capacity: 7
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/9mm_pistol_magazine.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazinePistolHighCapacity9mm
+  name: extended pistol magazine (9x19mm Parabellum)
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistol9mm
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgePistol9mm
+    capacity: 16
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/9mm_smg_magazine.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+

@@ -1,12 +1,11 @@
 - type: entity
-  name: Foldable Barrier
-  id: FoldableBarrier
+  name: Nanotrasen's Folding Barrier
+  id: BarricadeFoldingNanoTrasen
   description: A rather heavy looking barricade made out of plasteel, can be folded, denying any defensive potential this might have.
   parent: BaseStructure
   components:
   - type: Transform
     anchored: false
-    noRot: true
   - type: Sprite
     sprite: Tucano/Structures/nt_barrier_1.rsi
     layers:
@@ -72,14 +71,13 @@
     price: 200
 
 - type: entity
-  name: Foldable Barrier
-  id: FoldableBarrierDamaged
+  name: Nanotrasen's Damaged Folding Barrier
+  id: BarricadeFoldingNanoTrasenDamaged
   description: A plasteel folding barricade, this one seems to be damaged.
   parent: BaseStructure
   components:
   - type: Transform
     anchored: false
-    noRot: true
   - type: Sprite
     sprite: Tucano/Structures/nt_barrier_2.rsi
     layers:
