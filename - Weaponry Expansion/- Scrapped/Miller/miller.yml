@@ -1,0 +1,16 @@
+- type: entity
+  name: NT-HTR "Miller"
+  parent: BaseWeaponRevolver
+  id: WeaponRevolverMiller
+  description: A Late-Generation revolver, pretty technological and fast, perfect for those who refuse to use a pistol for whatever reason. Uses .45 Magnum.
+  components:
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Revolvers/miller.rsi
+  - type: Clothing
+    sprite: Tucano/Objects/Weapons/Guns/Revolvers/miller.rsi
+  - type: Gun
+    fireRate: 3
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/miller.ogg
+  - type: UseDelay
+    delay: 0.15

@@ -1,0 +1,33 @@
+- type: entity
+  id: MagazinePistolSubMachineGunMac11
+  name: Mac-11 magazine (.35 auto)
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolSubMachineGunMac11
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgePistol
+    whitelist:
+      tags:
+        - CartridgePistol
+    capacity: 35
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Ammunition/Magazines/Pistol/smg_mag_mac11.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+

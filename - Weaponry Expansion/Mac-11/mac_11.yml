@@ -2,7 +2,7 @@
   name: MAC-11
   parent: BaseWeaponSubMachineGun
   id: WeaponSubMachineMac11
-  description: Basically a box that shoots bullets, a very retro weaponry for wannabe gangsters. Uses .9mm Ammunition.
+  description: Basically a box that shoots bullets, a very retro weaponry for wannabe gangsters. Uses .35 auto Ammunition.
   components:
   - type: Sprite
     sprite: Tucano/Objects/Weapons/Guns/SMGs/mac11.rsi
@@ -25,7 +25,7 @@
     fireRate: 13
     selectedMode: FullAuto
     soundGunshot:
-      path: /Audio/Tucano/Weapons/Guns/Gunshots/9mm.ogg
+      path: /Audio/Tucano/Weapons/Guns/Gunshots/mac11.ogg
     availableModes:
     - FullAuto
     - SemiAuto
@@ -33,20 +33,20 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistol9mm
+        startingItem: MagazinePistolSubMachineGunMac11
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazinePistol9mm
+            - MagazinePistolSubMachineGunMac11
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol9mm
+        startingItem: CartridgePistol
         priority: 1
         whitelist:
           tags:
-            - CartridgePistol9mm
+            - CartridgePistol
   - type: MagazineVisuals
     magState: mag
     steps: 1

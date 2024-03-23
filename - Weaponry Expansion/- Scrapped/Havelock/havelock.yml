@@ -1,0 +1,50 @@
+- type: entity
+  name: NT-REV "Havelock"
+  parent: BaseItem
+  id: WeaponRevolverHavelock
+  description: A cheap, easy to produce revolver. Uses .35 Auto Ammunition.
+  components:
+  - type: Sprite
+    state: icon
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Clothing
+    sprite: Tucano/Objects/Weapons/Guns/Revolvers/havelock.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: AmmoCounter
+  - type: Gun
+    selectedMode: SemiAuto
+    fireRate: 1.2
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Tucano/Weapons/Guns/Gunshots/havelock.ogg
+  - type: UseDelay
+    delay: 0.77
+  - type: ContainerContainer
+    containers:
+      revolver-ammo: !type:Container
+  - type: RevolverAmmoProvider
+    whitelist:
+      tags:
+        - CartridgePistol
+        - SpeedLoaderPistol
+    proto: CartridgeMagnum
+    capacity: 6
+    chambers: [ True, True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null, null ]
+    soundEject:
+      path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+  - type: StaticPrice
+    price: 200

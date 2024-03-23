@@ -1,15 +1,13 @@
 - type: entity
   id: ShellShotgunHotshot
-  name: hotshot shell (.50)
+  name: hotshot shell (12 Gauge)
   description: An experimental and powerful shell with an inner battery and laser concentration system.
   parent: BaseCartridge
-  abstract: true
   components:
   - type: Tag
     tags:
-    - Cartridge
-    - ShellShotgun
     - ShellShotgunHotshot
+    - ShellShotgun
   - type: CartridgeAmmo
     count: 8
     spread: 16
