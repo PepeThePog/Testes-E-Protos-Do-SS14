@@ -1,0 +1,45 @@
+- type: entity
+  parent: CrateBaseSecure
+  suffix: Armory, High-Tech
+  id: CrateHighSecWeaponsStorageSecure
+  name: high security weapons crate
+  description: An armored crate for storage of high-risk, high-security weapons and equipment.
+  components:
+  - type: Sprite
+    sprite: Tucano/Structures/Storage/Crates/high_security_weapons.rsi
+  - type: AccessReader
+    access: [["Armory"]]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+
+- type: entity
+  parent: CrateBaseSecure
+  suffix: Armory, High-Tech
+  id: CrateHighSecSidearmsStorageSecure
+  name: high security sidearms crate
+  description: An armored crate for storage of high-risk sidearms.
+  components:
+  - type: Sprite
+    sprite: Tucano/Structures/Storage/Crates/high_security_sidearms.rsi
+  - type: AccessReader
+    access: [["Armory"]]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak

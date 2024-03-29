@@ -1,0 +1,76 @@
+- type: entity
+  name: '???'
+  suffix: Unnamed, Thumper
+  description: The manifestation of my being will watch over you, when you sleep in bed, and you wake up, you won't be able to move any part of you - Thumper.
+  parent: MobXeno
+  id: MobUnnamedThumper
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Tucano/Mobs/Demons/unnamed_thumper.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      650: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 5
+    baseSprintSpeed: 0.5
+  - type: MeleeWeapon
+    altDisarm: true
+    soundHit:
+      path: /Audio/Tucano/Weapons/Xeno/wendigo-attack.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 35
+        Structural: 80
+        Piercing: 35
+  - type: Devourer
+    foodPreference: Humanoid
+    shouldStoreDevoured: false
+    chemical: Omnizine
+    healRate: 55.0
+    whitelist:
+      components:
+      - MobState
+      - Door
+      tags:
+      - Wall
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 15500
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+  - type: SpamEmitSound
+    sound:
+      params:
+        volume: -4
+      collection: Thumper
+
+- type: soundCollection
+  id: Thumper
+  files:
+    - /Audio/Tucano/Voice/Thumper/Thumper_1.ogg
+    - /Audio/Tucano/Voice/Thumper/Thumper_2.ogg
+    - /Audio/Tucano/Voice/Thumper/Thumper_3.ogg
+    - /Audio/Tucano/Voice/Thumper/Thumper_4.ogg
+    - /Audio/Tucano/Voice/Thumper/Thumper_5.ogg
+    - /Audio/Tucano/Voice/Thumper/Thumper_6.ogg
+    - /Audio/Tucano/Voice/Thumper/Thumper_7.ogg
+    - /Audio/Tucano/Voice/Thumper/Thumper_8.ogg
+

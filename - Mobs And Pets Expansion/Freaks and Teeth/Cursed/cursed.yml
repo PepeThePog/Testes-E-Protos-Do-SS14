@@ -6,7 +6,7 @@
   components:
   - type: CargoSellBlacklist
   - type: Sprite
-    sprite: Mobs/Ghosts/cursed.rsi
+    sprite: Tucano/Mobs/Ghosts/cursed.rsi
     layers:
     - state: cursed
   - type: ContentEye

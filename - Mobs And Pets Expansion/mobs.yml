@@ -1,0 +1,166 @@
+- type: entity
+  name: Alternate Spawner
+  id: SpawnMobAlternate
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Tucano/Mobs/Demons/alternate.rsi
+        state: alive
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobAlternateAlt
+      - MobAlternate
+
+- type: entity
+  name: Cave Geist Spawner
+  id: SpawnMobCaveGeist
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Tucano/Mobs/Aliens/cave_geist.rsi
+        state: alive
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobCaveGeist
+
+- type: entity
+  name: Cursed Spawner
+  id: SpawnMobCursed
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Tucano/Mobs/Ghosts/cursed.rsi
+        state: cursed
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobObserverCursed
+
+- type: entity
+  name: Forgotten Spawner
+  id: SpawnMobForgotten
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Tucano/Mobs/Demons/Faithless/forgotten.rsi
+        state: alive
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobForgotten
+
+- type: entity
+  name: Thumper Spawner
+  id: SpawnMobUnnamedThumper
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Tucano/Mobs/Demons/unnamed_thumper.rsi
+        state: alive
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobUnnamedThumper
+
+- type: entity
+  name: Wendigo Spawner
+  id: SpawnMobWendigo
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Tucano/Mobs/Demons/wendigo.rsi
+        state: alive
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobWendigo
+
+# Terror Spiders
+
+- type: entity
+  name: Terror Spider Queen Spawner
+  id: SpawnMobTerrorSpiderQueen
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Tucano/Mobs/Aliens/TerrorSpiders/terror_spiders.rsi
+        state: queen_alive
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobTerrorSpiderQueen
+
+- type: entity
+  name: Terror Spider Princess Spawner
+  id: SpawnMobTerrorSpiderPrincess
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Tucano/Mobs/Aliens/TerrorSpiders/terror_spiders.rsi
+        state: princess_alive
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobTerrorSpiderPrincess
+
+
+- type: entity
+  name: Terror Hive LowTier Timed Spawner
+  id: TerrorHiveLowTierTimedSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+      - sprite: Tucano/Mobs/Aliens/TerrorSpiders/terror_spiders.rsi
+        state: white_alive
+      - state: ai
+    - type: Timer
+    - type: TimedSpawner
+      prototypes:
+      - MobTerrorSpiderWhite
+      - MobTerrorSpiderGreen
+      - MobTerrorSpiderPurple
+      chance: 0.85
+      intervalSeconds: 220
+      minimumEntitiesSpawned: 1
+      maximumEntitiesSpawned: 3
+
+- type: entity
+  name: Terror Hive MidTier Timed Spawner
+  id: TerrorHiveMidTierTimedSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+      - sprite: Tucano/Mobs/Aliens/TerrorSpiders/terror_spiders.rsi
+        state: red_alive
+      - state: ai
+    - type: Timer
+    - type: TimedSpawner
+      prototypes:
+      - MobTerrorSpiderRed
+      - MobTerrorSpiderYellow
+      chance: 0.55
+      intervalSeconds: 300
+      minimumEntitiesSpawned: 1
+      maximumEntitiesSpawned: 2
