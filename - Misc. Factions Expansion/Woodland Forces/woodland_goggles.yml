@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesHudWoodlands
+  name: PFD-SIG "Trayson Goggles"
+  description: A comfortable looking pair of goggles, able to scan basic information about anyone who's in view. Also protects the user from Flashes and such.
+  components:
+  - type: Sprite
+    sprite: Tucano/Clothing/Eyes/Hud/woodland_goggles.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/Eyes/Hud/woodland_goggles.rsi
+  - type: ShowSyndicateIcons
+  - type: ShowSecurityIcons
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: IdentityBlocker
+    coverage: EYES

@@ -1,0 +1,27 @@
+- type: entity
+  id: AttackWarning
+  name: Warning
+  suffix: Attack-Warning
+  description: You should get the fuck away from that.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Clickable
+  - type: Sprite
+    sprite: Tucano/Effects/attack_warning.rsi
+    state: warning_1
+    drawdepth: WallTops
+  - type: Transform
+    anchored: true
+  - type: TimedDespawn
+    lifetime: 0.68
+  - type: AmbientSound
+    range: 10
+    volume: 5
+    sound:
+      path: /Audio/Tucano/Effects/AttackWarnings/attack_warning.ogg
+  - type: PointLight
+    radius: 4
+    energy: 6
+    castShadows: false
+    color: "#ffd500"

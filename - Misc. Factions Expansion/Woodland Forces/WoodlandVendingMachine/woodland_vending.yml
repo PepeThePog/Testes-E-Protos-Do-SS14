@@ -1,0 +1,31 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineWoodlands
+  name: PFDispenser'
+  description: A vending machine which dispenses armor and basic equipment for soldiers.
+  components:
+  - type: VendingMachine
+    pack: WoodlandsInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+  - type: Advertise
+    pack: WoodlandsAds
+  - type: Sprite
+    sprite: Tucano/Structures/Machines/VendingMachines/woodland_vending.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["Command"]]
+  - type: PointLight
+    radius: 1
+    energy: 1.2
+    color: "#2f3140"

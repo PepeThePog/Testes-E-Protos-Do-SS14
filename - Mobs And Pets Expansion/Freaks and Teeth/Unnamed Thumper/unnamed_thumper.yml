@@ -65,12 +65,11 @@
 - type: soundCollection
   id: Thumper
   files:
-    - /Audio/Tucano/Voice/Thumper/Thumper_1.ogg
-    - /Audio/Tucano/Voice/Thumper/Thumper_2.ogg
-    - /Audio/Tucano/Voice/Thumper/Thumper_3.ogg
-    - /Audio/Tucano/Voice/Thumper/Thumper_4.ogg
-    - /Audio/Tucano/Voice/Thumper/Thumper_5.ogg
-    - /Audio/Tucano/Voice/Thumper/Thumper_6.ogg
-    - /Audio/Tucano/Voice/Thumper/Thumper_7.ogg
-    - /Audio/Tucano/Voice/Thumper/Thumper_8.ogg
-
+    - /Audio/Tucano/Voice/Thumper/thumper_1.ogg
+    - /Audio/Tucano/Voice/Thumper/thumper_2.ogg
+    - /Audio/Tucano/Voice/Thumper/thumper_3.ogg
+    - /Audio/Tucano/Voice/Thumper/thumper_4.ogg
+    - /Audio/Tucano/Voice/Thumper/thumper_5.ogg
+    - /Audio/Tucano/Voice/Thumper/thumper_6.ogg
+    - /Audio/Tucano/Voice/Thumper/thumper_7.ogg
+    - /Audio/Tucano/Voice/Thumper/thumper_8.ogg

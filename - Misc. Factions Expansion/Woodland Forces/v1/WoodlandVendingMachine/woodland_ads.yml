@@ -1,0 +1,15 @@
+- type: advertisementsPack
+  id: WoodlandsVendAds
+  advertisements:
+  - advertisement-woodlands-1
+  - advertisement-woodlands-2
+  - advertisement-woodlands-3
+  - advertisement-woodlands-4
+  - advertisement-woodlands-5
+  - advertisement-woodlands-6
+  - advertisement-woodlands-7
+  - advertisement-woodlands-8
+  - advertisement-woodlands-9
+  - advertisement-woodlands-10
+  thankyous:
+  - vending-machine-thanks

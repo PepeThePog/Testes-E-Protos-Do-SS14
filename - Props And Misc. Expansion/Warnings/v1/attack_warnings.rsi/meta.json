@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 64
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken From various codebases",
+  "states": [
+    {
+      "name": "warning_1",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "warning_2",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "warning_3",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "warning_4",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

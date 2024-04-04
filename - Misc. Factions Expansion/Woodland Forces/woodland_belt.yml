@@ -1,0 +1,10 @@
+- type: entity
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase]
+  id: ClothingBeltMilitaryWoodlands
+  name: PFD-SIB Battle-Belt
+  description: A tactical, green battle belt, used by the Planetary Forces Division.
+  components:
+  - type: Sprite
+    sprite: Tucano/Clothing/Belt/woodland_belt.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/Belt/woodland_belt.rsi

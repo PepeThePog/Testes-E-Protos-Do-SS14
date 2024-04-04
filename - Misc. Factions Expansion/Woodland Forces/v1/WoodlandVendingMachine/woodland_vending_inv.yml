@@ -1,0 +1,22 @@
+- type: vendingMachineInventory
+  id: WoodlandsInventory
+  startingInventory:
+    ClothingUniformJumpsuitWoodlands: 5
+    ClothingUniformJumpsuitWoodlandsCamo: 5
+    ClothingUniformJumpsuitWoodlands: 0 # PLACEHOLDER
+
+    ClothingOuterArmorWoodlandLight: 5
+    ClothingOuterArmorWoodlandMedium: 3
+    ClothingOuterArmorWoodlandHeavy: 2
+
+    ClothingHeadHelmetWoodland: 10
+    ClothingEyesHudWoodlands: 10
+    ClothingBeltMilitaryWoodlands: 10
+
+    ClothingHandsGlovesCombat: 10
+    ClothingShoesBootsCombat: 10
+    ClothingHeadsetAltCentCom: 10
+
+    ClothingMilitaryBackpack: 5
+    ClothingBackpackMilitarySatchel: 3
+    ClothingBackpackDuffelMilitary: 2

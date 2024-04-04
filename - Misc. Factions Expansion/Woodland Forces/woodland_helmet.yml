@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: ClothingHeadHelmetWoodland
+  name: PFD-SIH Helmet
+  description: A combat helmet used by the Planetary Forces Division, vaguely associated with NanoTrasen. Has the Woodland Color Scheme.
+  components:
+  - type: Sprite
+    sprite: Tucano/Clothing/Head/Helmets/woodland_helmet.rsi
+  - type: Clothing
+    sprite: Tucano/Clothing/Head/Helmets/woodland_helmet.rsi
