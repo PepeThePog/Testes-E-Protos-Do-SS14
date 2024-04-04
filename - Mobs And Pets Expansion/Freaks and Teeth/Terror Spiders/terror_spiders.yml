@@ -84,6 +84,7 @@
     layers:
     - state: white_alive
       map: ["enum.DamageStateVisualLayers.Base"]
+      scale: 0.9, 0.9
   - type: DamageStateVisuals
     states:
       Alive:
@@ -152,6 +153,7 @@
     layers:
     - state: purple_alive
       map: ["enum.DamageStateVisualLayers.Base"]
+      scale: 1.1, 1.1
   - type: DamageStateVisuals
     states:
       Alive:
@@ -251,7 +253,7 @@
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    soundGunshot: /Audio/Tucano/Effects/spider_inject.ogg
   - type: MeleeWeapon
     damage:
       types:
@@ -280,6 +282,7 @@
     layers:
     - state: queen_alive
       map: ["enum.DamageStateVisualLayers.Base"]
+      scale: 1.25, 1.25
   - type: DamageStateVisuals
     states:
       Alive:
@@ -289,17 +292,17 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      220: Dead
+      350: Dead
   - type: MeleeWeapon
     damage:
       types:
         Blunt: 10
         Slash: 15
         Poison: 10
-        Structural: 20
+        Structural: 35
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.5
-    baseSprintSpeed: 4.5
+    baseSprintSpeed: 3.5
   - type: PointLight
     radius: 3.5
     energy: 3.5
@@ -317,6 +320,7 @@
     layers:
     - state: princess_alive
       map: ["enum.DamageStateVisualLayers.Base"]
+      scale: 0.7, 0.7
   - type: DamageStateVisuals
     states:
       Alive:
@@ -332,7 +336,7 @@
       types:
         Blunt: 5
         Slash: 5
-        Poison: 30
+        Poison: 15
         Structural: 5
   - type: MovementSpeedModifier
     baseWalkSpeed: 4.5

@@ -1,0 +1,64 @@
+- type: entity
+  parent:
+  - BaseMobFlesh
+  id: MobLeech
+  name: Leech
+  description: A disgusting worm that likes to bite and devour any prey, usually in packs.
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Faithless
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Tucano/Mobs/Aliens/leech.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+      scale: 0.8, 0.8
+  - type: PressureImmunity
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      60: Dead
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: Physics
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.5  
+    baseSprintSpeed: 5.8
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.20
+        density: 20
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 5
+        Piercing: 15
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 140
+      behaviors:
+      - !type:GibBehavior { }
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpene
