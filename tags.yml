@@ -1,5 +1,8 @@
 - type: Tag
-  id: CartridgePistol9mm
+  id: MagazinePistolSubMachineGunMac11
 
 - type: Tag
-  id: MagazinePistol9mm
+  id: MagazinePistolSubMachineGunDrozdM1
+
+- type: Tag
+  id: ShellShotgunHotshot

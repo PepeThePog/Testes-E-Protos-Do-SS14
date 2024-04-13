@@ -1,0 +1,108 @@
+- type: entity
+  abstract: true
+  id: BaseMobBossReaper
+  name: The Reaper Of Souls
+  description: The reaper has come for your soul, do not resist Death.
+  components:
+  - type: Sprite
+    sprite: Tucano/Mobs/Demons/reaper.rsi
+    drawdepth: Ghosts
+    scale: 1.2,1.2
+    layers:
+    - state: reaper
+      shader: unshaded
+
+
+- type: entity
+  parent: BaseMobBossReaper
+  id: MobBossReaperSpawn
+  suffix: Spawn
+  components:
+  - type: Sprite
+    layers:
+    - state: spawn
+      shader: unshaded
+  - type: TimedDespawn
+    lifetime: 1.5
+  - type: SpawnOnDespawn
+    prototype: MobBossReaper
+  - type: PointLight
+    radius: 150 # Toda a estação precisa saber da sua luz antes de morrer :D
+    energy: 15.5
+    color: "#c9deff"
+    castShadows: false
+
+- type: entity
+  parent: [BaseMobBossReaper, BaseMob]
+  id: MobBossReaper
+  components:
+  - type: AnnounceOnSpawn
+    message: YOUR TIME HAS COME, MORTAL
+    sender: '???'
+    sound:
+      path: /Audio/Tucano/Misc/reaper_rises.ogg
+    color: white
+  - type: CargoSellBlacklist
+  - type: ContentEye
+    maxZoom: 2.0,2.0
+  - type: Fixtures
+    fixtures:
+      EventHorizonCollider:
+        shape:
+          !type:PhysShapeCircle
+            radius: 5
+        hard: false
+        restitution: 0.8
+        density: 99999
+        mask:
+        - AllMask
+        layer:
+        - AllMask
+      EventHorizonConsumer:
+        shape:
+          !type:PhysShapeCircle
+            radius: 5
+        hard: false
+        mask:
+        - AllMask
+        layer:
+        - AllMask
+  - type: Input
+    context: "ghost"
+  - type: Damageable
+    damageContainer: Biological
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      3500: Dead # O Menino é uma bossfight
+  - type: MovementIgnoreGravity
+  - type: IntrinsicRadioReceiver
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Command
+    - CentCom
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Syndicate
+    globalReceive: true
+  - type: Physics
+    bodyType: Dynamic
+    bodyStatus: InAir
+  - type: CanMoveInAir
+  - type: EventHorizon
+    radius: 4
+    canBreachContainment: true
+  - type: WarpPoint
+    follow: true
+    location: The Reaper Of Souls
+  - type: PointLight
+    radius: 100 # Toda a estação precisa saber da sua luz antes de morrer :D
+    energy: 6.5
+    color: "#c9deff"
+    castShadows: false

@@ -1,0 +1,28 @@
+- type: entity
+  name: EXC-SCM "KS-32"
+  parent: BaseWeaponShotgun
+  id: WeaponShotgunKS32
+  description: A very cheap, small shotgun only able to fit four bullets, made by the Excelsior Faction. Uses .50 shotgun shells.
+  components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,4,0
+    sprite: Tucano/Objects/Weapons/Guns/Shotguns/ks32.rsi
+  - type: Sprite
+    sprite: Tucano/Objects/Weapons/Guns/Shotguns/ks32.rsi
+  - type: Clothing
+    sprite: Tucano/Objects/Weapons/Guns/Shotguns/ks32.rsi
+  - type: BallisticAmmoProvider
+    capacity: 4
+  - type: Tag
+    tags:
+    - WeaponShotgunKammerer
+  - type: Gun
+    fireRate: 1.5
+    soundGunshot:
+      path: /Audio/Tucano/Weapons/Guns/Gunshots/ks32.ogg
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: -5
+    maxAngle: -5

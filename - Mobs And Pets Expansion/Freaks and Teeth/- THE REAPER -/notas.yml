@@ -1,0 +1,4 @@
+  - type: TimedDespawn
+    lifetime: 3.5
+  - type: SpawnOnDespawn
+    prototype: MobNarsie

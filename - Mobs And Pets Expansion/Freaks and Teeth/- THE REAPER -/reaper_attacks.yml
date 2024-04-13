@@ -1,0 +1,104 @@
+# Base
+
+- type: entity
+  abstract: true
+  id: BaseBossReaperAttackWarning
+  name: Reaper Warning
+  description: You should get the fuck away from that.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Clickable
+  - type: Sprite
+    sprite: Tucano/Effects/reaper_attacks.rsi
+    state: attack_marker
+    drawdepth: WallTops
+  - type: Transform
+    anchored: true
+  - type: TimedDespawn
+    lifetime: 1.5
+  - type: SpawnOnDespawn
+    prototype: AttackWarning #Placeholder
+  - type: AmbientSound
+    range: 10
+    volume: 10
+    sound:
+      path: /Audio/Tucano/Effects/AttackWarnings/attack_warning_2.ogg
+  - type: PointLight
+    radius: 6
+    energy: 3
+    castShadows: false
+    color: "#c9deff"
+
+- type: entity
+  abstract: true
+  id: BaseBossReaperAttack
+  parent: BaseBossReaperAttackWarning
+  name: Reaper Attack
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Clickable
+  - type: Transform
+    anchored: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.5
+        density: 190
+        mask:
+        - FullTileMask
+        layer:
+        - FullTileMask
+  - type: TimedDespawn
+    lifetime: 2.0
+  - type: SpawnOnDespawn
+    prototype: AttackWarning # Placeholder
+  - type: PointLight
+    radius: 2
+    energy: 2
+    castShadows: false
+    color: "#c9deff"
+
+# Attack
+
+- type: entity
+  id: BossReaperLightAttack
+  parent: BaseBossReaperAttack
+  name: Reaper Light Attack
+  description: SLASH!
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: Tucano/Effects/reaper_attacks.rsi
+    drawdepth: Ghosts
+    scale: 1.2,1.2
+    layers:
+    - state: light_attack
+      shader: unshaded
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 15
+  - type: StepTrigger
+    intersectRatio: 0.2
+    requiredTriggeredSpeed: 0
+  - type: TriggerOnStepTrigger
+  - type: DamageUserOnTrigger
+    damage:
+      types:
+        Slash: 15
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.5
+    sprintSpeedModifier: 0.5
+  - type: TimedDespawn
+    lifetime: 1.3
+  - type: AmbientSound
+    enabled: true
+    volume: 6
+    range: 12
+    sound:
+      path: /Audio/Tucano/Weapons/reaper_attack.ogg

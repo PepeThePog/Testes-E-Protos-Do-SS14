@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "boss_marker",
+      "delays": [
+        [
+          0.05,
+          0.025,
+          0.025,
+          0.025,
+          0.05,
+          0.025,
+          0.025,
+          0.025
+        ]
+      ]
+    }
+  ]
+}
